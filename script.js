@@ -1,10 +1,30 @@
-// Mobile Navigation Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+// Desktop Hamburger Menu Toggle
+const desktopHamburger = document.getElementById('desktopHamburger');
+const hamburgerMenu = document.getElementById('hamburgerMenu');
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+if (desktopHamburger && hamburgerMenu) {
+    desktopHamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hamburgerMenu.classList.toggle('active');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!desktopHamburger.contains(e.target) && !hamburgerMenu.contains(e.target)) {
+            hamburgerMenu.classList.remove('active');
+        }
+    });
+
+    // Close dropdown when clicking on a link
+    hamburgerMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerMenu.classList.remove('active');
+        });
+    });
+}
+
+// Mobile Navigation Toggle (using desktop hamburger on mobile)
+const navMenu = document.querySelector('.nav-menu');
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
