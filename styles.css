@@ -425,19 +425,22 @@ body {
 }
 
 .countdown-container {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--dark-color);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 3rem 2rem;
     margin: 2rem 0;
     width: 100%;
     max-width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .countdown-container h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     font-weight: 600;
+    color: var(--dark-color);
 }
 
 .countdown {
@@ -449,7 +452,8 @@ body {
 }
 
 .countdown-item {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(124, 179, 66, 0.25);
+    color: var(--dark-color);
     border-radius: 15px;
     padding: 2.5rem 2rem;
     min-width: 150px;
@@ -462,10 +466,12 @@ body {
     font-size: 5rem;
     font-weight: 700;
     line-height: 1;
+    color: var(--dark-color);
 }
 
 .countdown-label {
     display: block;
+    color: var(--dark-color);
     font-size: 1.2rem;
     margin-top: 1rem;
     text-transform: uppercase;
@@ -1156,22 +1162,23 @@ a, button {
     }
 
     .logo-img {
-        height: 80px;
+        height: 65px;
         width: auto;
-        max-width: 300px;
+        max-width: 180px;
         object-fit: contain;
     }
 
     .sponsor-logo {
-        height: 60px;
+        height: 40px;
         width: auto;
-        max-width: 200px;
+        max-width: 90px;
         object-fit: contain;
     }
 
     .nav-brand {
-        gap: 2rem;
-        margin-left: -2rem;
+        gap: 1rem;
+        margin-left: 0.5rem;
+        left: 0.5rem;
     }
 
     .navbar-container {
@@ -1225,18 +1232,19 @@ a, button {
     }
 
     .nav-actions {
-        gap: 1.5rem;
-        padding-right: 1.5rem;
+        gap: 0.5rem;
+        padding-right: 0.5rem;
+        right: 0.25rem;
     }
 
     .nav-social {
-        width: 80px;
-        height: 80px;
+        width: 40px;
+        height: 40px;
     }
 
     .nav-social svg {
-        width: 45px;
-        height: 45px;
+        width: 22px;
+        height: 22px;
     }
 
     .hero {
@@ -1257,26 +1265,34 @@ a, button {
         font-size: 1.2rem;
     }
 
+    .countdown-container {
+        padding: 2rem 1rem;
+        margin: 1.5rem 0.5rem;
+    }
+
     .countdown-container h2 {
         font-size: 2rem;
     }
 
     .countdown {
-        gap: 1rem;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .countdown-item {
-        min-width: 120px;
-        padding: 2rem 1.5rem;
-        max-width: 150px;
+        min-width: 70px;
+        padding: 1.25rem 0.75rem;
+        max-width: 85px;
+        flex: 1 1 70px;
     }
 
     .countdown-number {
-        font-size: 3.5rem;
+        font-size: 2.75rem;
     }
 
     .countdown-label {
-        font-size: 1rem;
+        font-size: 0.75rem;
     }
 
     .section-title {
@@ -1301,22 +1317,23 @@ a, button {
     .gallery-item {
     }
     .logo-img {
-        height: 60px;
+        height: 50px;
         width: auto;
-        max-width: 220px;
+        max-width: 140px;
         object-fit: contain;
     }
 
     .sponsor-logo {
-        height: 45px;
+        height: 32px;
         width: auto;
-        max-width: 150px;
+        max-width: 70px;
         object-fit: contain;
     }
 
     .nav-brand {
-        gap: 1.5rem;
-        margin-left: -1.5rem;
+        gap: 0.6rem;
+        margin-left: 0;
+        left: 0.5rem;
     }
 
     .navbar-container {
@@ -1339,18 +1356,19 @@ a, button {
     }
 
     .nav-actions {
-        gap: 1rem;
-        padding-right: 1rem;
+        gap: 0.35rem;
+        padding-right: 0.35rem;
+        right: 0.25rem;
     }
 
     .nav-social {
-        width: 60px;
-        height: 60px;
+        width: 36px;
+        height: 36px;
     }
 
     .nav-social svg {
-        width: 35px;
-        height: 35px;
+        width: 20px;
+        height: 20px;
     }
 
     .hero-title {
@@ -1378,12 +1396,18 @@ a, button {
     }
 
     .hamburger-menu-dropdown {
-        min-width: 260px;
+        position: fixed;
+        top: 110px;
         left: 50%;
         transform: translateY(-10px) translateX(-50%);
         right: auto;
-        max-height: 80vh;
+        width: calc(100vw - 2rem);
+        max-width: 320px;
+        max-height: calc(100vh - 120px);
         overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        z-index: 1005;
     }
 
     .hamburger-menu-dropdown.active {
@@ -1391,7 +1415,7 @@ a, button {
     }
 
     .hamburger-menu-dropdown a {
-        padding: 1rem 1.5rem;
+        padding: 0.85rem 1.25rem;
         min-height: 44px;
         display: flex;
         align-items: center;
@@ -1401,26 +1425,34 @@ a, button {
         margin-top: 125px !important;
     }
 
+    .countdown-container {
+        padding: 1.5rem 0.75rem;
+        margin: 1rem 0.5rem;
+    }
+
     .countdown-container h2 {
         font-size: 1.5rem;
     }
 
     .countdown {
         gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .countdown-item {
-        min-width: 80px;
-        padding: 1.5rem 1rem;
-        max-width: 100px;
+        min-width: 65px;
+        padding: 1rem 0.5rem;
+        max-width: 80px;
+        flex: 1 1 65px;
     }
 
     .countdown-number {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
 
     .countdown-label {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     .hero-buttons {
@@ -1474,15 +1506,15 @@ a, button {
     }
 
     .nav-brand {
-        max-width: calc(100vw - 180px);
+        max-width: calc(100vw - 200px);
     }
 
     .logo-img {
-        max-width: 140px;
+        max-width: 120px;
     }
 
     .sponsor-logo {
-        max-width: 100px;
+        max-width: 65px;
     }
 
     .merch-buttons,
