@@ -82,12 +82,15 @@ window.addEventListener('scroll', () => {
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
         if (target) {
-            const offsetTop = target.offsetTop - 70;
+            const navbarHeight = navbar ? navbar.offsetHeight : 100;
+            const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
             window.scrollTo({
-                top: offsetTop,
+                top: Math.max(0, offsetTop),
                 behavior: 'smooth'
             });
         }
@@ -97,6 +100,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Contact Form Handler
 const contactForm = document.getElementById('contactForm');
 
+if (contactForm) {
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
@@ -115,6 +119,7 @@ contactForm.addEventListener('submit', (e) => {
     // Reset form
     contactForm.reset();
 });
+}
 
 // Intersection Observer for fade-in animations
 const observerOptions = {

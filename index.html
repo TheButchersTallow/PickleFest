@@ -30,19 +30,28 @@
                 <li><a href="index.html#merch">Merch</a></li>
             </ul>
             <div class="nav-actions">
-                <div class="hamburger desktop-hamburger" id="desktopHamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <!-- Hamburger Menu Dropdown -->
-                <div class="hamburger-menu-dropdown" id="hamburgerMenu">
+                <div class="hamburger-dropdown-wrapper">
+                    <div class="hamburger desktop-hamburger" id="desktopHamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <!-- Hamburger Menu Dropdown -->
+                    <div class="hamburger-menu-dropdown" id="hamburgerMenu">
                     <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#vendors">Vendors</a></li>
+                        <li><a href="index.html#sponsors">Sponsors</a></li>
+                        <li><a href="index.html#merch">Merch</a></li>
                         <li><a href="competitions.html">Competitions</a></li>
                         <li><a href="carshow.html">Car Show</a></li>
                         <li><a href="5krun.html">5K Run</a></li>
                         <li><a href="livemusic.html">Live Music</a></li>
+                        <li><a href="https://forms.gle/nbLUEKdLo1BDnyRp9" target="_blank" rel="noopener noreferrer">Apply to be a Vendor</a></li>
+                        <li><a href="assets/picklefest/Pickle Fest Sponsor Packet 2026 (10) (1).pdf" target="_blank" rel="noopener noreferrer">Become a Sponsor</a></li>
                     </ul>
+                    </div>
                 </div>
                 <a href="https://www.facebook.com/Picklefesttexarkana" target="_blank" rel="noopener noreferrer" class="nav-social" aria-label="Facebook">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -69,31 +78,35 @@
         <div class="hero-content">
             <h1 class="hero-title">🥒 Welcome to Pickle Fest Texarkana 🥒</h1>
             <p class="hero-subtitle">🥒 Saturday, October 10, 2026 • 10AM-5PM • FREE ADMISSION 🥒</p>
-            <p class="hero-quote">💬 Paddy says: "Mark your calendar. Cancel your plans. Tell your boss I said it's important."</p>
-            <div class="countdown-container">
-                <h2>🥒 Event Countdown 🥒</h2>
-                <div class="countdown" id="countdown">
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="days">00</span>
-                        <span class="countdown-label">Days</span>
+            <div class="hero-paddy-layout">
+                <div class="hero-paddy-wrapper">
+                    <div class="paddy-speech-bubble">
+                        "Mark your calendar. Cancel your plans. Tell your boss I said it's important."
                     </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="hours">00</span>
-                        <span class="countdown-label">Hours</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="minutes">00</span>
-                        <span class="countdown-label">Minutes</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-number" id="seconds">00</span>
-                        <span class="countdown-label">Seconds</span>
+                    <img src="assets/picklefest/paddy the pickle.jpg" alt="Paddy the Pickle" class="paddy-hero-img">
+                    <p class="paddy-caption">-Paddy The Pickle</p>
+                </div>
+                <div class="countdown-container">
+                    <h2>🥒 Event Countdown 🥒</h2>
+                    <div class="countdown" id="countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="hero-buttons">
-                <a href="index.html#about" class="btn btn-primary">FREE ENTRY</a>
-                <a href="#vendors" class="btn btn-secondary">Vendor Info</a>
             </div>
         </div>
     </section>
@@ -234,7 +247,7 @@
                         Partner with Pickle Fest 🥒 and connect with pickle enthusiasts and festival-goers. 
                         Showcase your brand to a passionate audience at the festival.
                     </p>
-                    <a href="https://docs.google.com/forms/d/1-im03ps4iGeQU6aq7sWa4ZLUFa1C1mGT9vMkTVstQ8c/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Apply to be a Vendor</a>
+                    <a href="https://forms.gle/nbLUEKdLo1BDnyRp9" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Apply to be a Vendor</a>
                 </div>
             </div>
         </div>
@@ -277,7 +290,7 @@
                             <p>Reach your ideal customers at the festival</p>
                         </div>
                     </div>
-                    <a href="index.html#sponsors" class="btn btn-primary">Become a Sponsor</a>
+                    <a href="assets/picklefest/Pickle Fest Sponsor Packet 2026 (10) (1).pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Become a Sponsor</a>
                 </div>
             </div>
         </div>
@@ -330,26 +343,26 @@
         <div class="container">
             <h2 class="section-title">🥒 Experience Pickle Fest 2025 🥒</h2>
             <p class="section-subtitle">See what makes Pickle Fest special 🥒</p>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="assets/picklefest/homepage.JPG" alt="Pickle Fest Gallery" class="gallery-image">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="assets/picklefest/homepage (2).JPG" alt="PickleFest Gallery" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/picklefest/homepage (3).jpg" alt="PickleFest Gallery" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/picklefest/homepage (4).jpg" alt="PickleFest Gallery" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/picklefest/homepage.JPG" alt="Pickle Fest Gallery" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/picklefest/homepage (5).jpg" alt="PickleFest Gallery" class="gallery-image">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/picklefest/pickle people.jpg" alt="PickleFest Gallery" class="gallery-image">
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="assets/picklefest/homepage (2).JPG" alt="PickleFest Gallery" class="gallery-image">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/picklefest/homepage (3).jpg" alt="PickleFest Gallery" class="gallery-image">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/picklefest/homepage (4).jpg" alt="PickleFest Gallery" class="gallery-image">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/picklefest/homepage (5).jpg" alt="PickleFest Gallery" class="gallery-image">
-                </div>
-                <div class="gallery-item">
-                    <img src="assets/picklefest/pickle people.jpg" alt="PickleFest Gallery" class="gallery-image">
-                </div>
-            </div>
         </div>
     </section>
 
