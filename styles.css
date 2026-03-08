@@ -425,8 +425,8 @@ body {
 }
 
 .countdown-container {
-    background: rgba(255, 255, 255, 0.95);
-    color: var(--dark-color);
+    background: rgba(76, 139, 34, 0.9);
+    color: var(--white);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 3rem 2rem;
@@ -440,7 +440,7 @@ body {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     font-weight: 600;
-    color: var(--dark-color);
+    color: var(--white);
 }
 
 .countdown {
@@ -452,8 +452,8 @@ body {
 }
 
 .countdown-item {
-    background: rgba(124, 179, 66, 0.25);
-    color: var(--dark-color);
+    background: rgba(56, 109, 24, 0.6);
+    color: var(--white);
     border-radius: 15px;
     padding: 2.5rem 2rem;
     min-width: 150px;
@@ -466,12 +466,12 @@ body {
     font-size: 5rem;
     font-weight: 700;
     line-height: 1;
-    color: var(--dark-color);
+    color: var(--white);
 }
 
 .countdown-label {
     display: block;
-    color: var(--dark-color);
+    color: var(--white);
     font-size: 1.2rem;
     margin-top: 1rem;
     text-transform: uppercase;
