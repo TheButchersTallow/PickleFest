@@ -849,7 +849,40 @@ section {
 }
 
 .sponsors-page .sponsor-qr-feature .sponsor-qr-lead {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sponsor-clover-cta {
+    margin: 0 0 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsor-clover-btn {
+    white-space: normal;
+    max-width: 320px;
+    text-align: center;
+}
+
+.sponsor-qr-image-link {
+    display: block;
+    width: fit-content;
+    max-width: min(320px, 85vw);
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 0;
+    border-radius: 12px;
+}
+
+.sponsor-qr-image-link:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 4px;
+}
+
+.sponsor-qr-image-link .sponsor-qr-image {
+    margin: 0;
 }
 
 .sponsor-qr-row {
