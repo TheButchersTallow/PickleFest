@@ -35,16 +35,25 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 
 // Countdown Timer
 function updateCountdown() {
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
+
+    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
+        return;
+    }
+
     // Set your event date here (format: YYYY-MM-DD HH:MM:SS)
     const eventDate = new Date('2026-10-10 10:00:00').getTime();
     const now = new Date().getTime();
     const distance = eventDate - now;
 
     if (distance < 0) {
-        document.getElementById('days').textContent = '00';
-        document.getElementById('hours').textContent = '00';
-        document.getElementById('minutes').textContent = '00';
-        document.getElementById('seconds').textContent = '00';
+        daysEl.textContent = '00';
+        hoursEl.textContent = '00';
+        minutesEl.textContent = '00';
+        secondsEl.textContent = '00';
         return;
     }
 
@@ -53,10 +62,10 @@ function updateCountdown() {
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById('days').textContent = String(days).padStart(2, '0');
-    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    daysEl.textContent = String(days).padStart(2, '0');
+    hoursEl.textContent = String(hours).padStart(2, '0');
+    minutesEl.textContent = String(minutes).padStart(2, '0');
+    secondsEl.textContent = String(seconds).padStart(2, '0');
 }
 
 // Update countdown every second
@@ -142,5 +151,14 @@ document.querySelectorAll('.feature-card, .activity-card, .gallery-item').forEac
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
+});
+
+// Randomize sponsor logos below presenting sponsors on each page load.
+document.querySelectorAll('[data-randomize-sponsors]').forEach(container => {
+    const cards = Array.from(container.children);
+
+    cards
+        .sort(() => Math.random() - 0.5)
+        .forEach(card => container.appendChild(card));
 });
 
