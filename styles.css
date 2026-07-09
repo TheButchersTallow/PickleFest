@@ -874,19 +874,20 @@ section {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    max-width: 1400px;
 }
 
 .sponsors-page .sponsor-benefits-page {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
 }
 
-/* Narrow, centered card; column flex so title + QR sit in viewport center */
+/* Wide sponsors layout: 6 logos per row */
 .sponsors-page .content-block.sponsor-qr-feature {
     text-align: center;
     align-self: center;
-    width: min(100%, 720px);
-    max-width: 720px;
+    width: min(100%, 1320px);
+    max-width: 1320px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -938,7 +939,13 @@ section {
 
 .presenting-sponsors-grid-single {
     grid-template-columns: minmax(0, 1fr);
-    max-width: 680px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.sponsors-page .presenting-sponsors-grid-single {
+    max-width: 100%;
+    width: 100%;
 }
 
 .sponsor-highlight-card {
@@ -979,14 +986,30 @@ section {
     max-height: 155px;
 }
 
+.sponsors-page .sponsor-highlight-card-primary {
+    width: 100%;
+    min-height: 260px;
+    padding: 2rem 2.5rem;
+}
+
+.sponsors-page .sponsor-highlight-card-primary .sponsor-highlight-logo-link {
+    width: 100%;
+}
+
+.sponsors-page .sponsor-highlight-card-primary .sponsor-highlight-logo {
+    width: 100%;
+    max-width: 100%;
+    max-height: 220px;
+}
+
 .sponsor-highlight-logo-walgreens {
     width: min(240px, 55vw);
 }
 
 .sponsor-logo-rotation {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1.25rem;
     width: 100%;
     margin: 2rem auto 1.5rem;
 }
@@ -995,17 +1018,17 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 140px;
+    min-height: 170px;
     background: var(--white);
     border-radius: 12px;
-    padding: 1rem;
+    padding: 1.25rem;
     box-shadow: var(--shadow);
 }
 
 .sponsor-logo-card img {
     width: 100%;
-    max-width: 180px;
-    max-height: 100px;
+    max-width: 100%;
+    max-height: 130px;
     height: auto;
     object-fit: contain;
     display: block;
@@ -1127,6 +1150,41 @@ section {
     white-space: normal;
     max-width: 320px;
     text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .sponsor-logo-rotation {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .sponsors-page .content-block.sponsor-qr-feature {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sponsor-logo-rotation {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .sponsors-page .sponsor-highlight-card-primary .sponsor-highlight-logo {
+        max-height: 160px;
+    }
+
+    .sponsor-logo-card {
+        min-height: 140px;
+    }
+
+    .sponsor-logo-card img {
+        max-height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsor-logo-rotation {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .sponsor-qr-image-link {
@@ -2492,6 +2550,17 @@ a, button {
     background: var(--white);
     color: var(--primary-color);
     border: 2px solid var(--primary-color);
+}
+
+/* Volunteers page */
+.volunteers-page .volunteers-feature {
+    text-align: center;
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+.volunteers-cta {
+    margin-top: 2rem;
 }
 
 /* Live Music page: show full image without any cropping */
