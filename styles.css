@@ -982,8 +982,79 @@ section {
     display: block;
 }
 
+.pickle-juice-competition-block {
+    border: 2px solid rgba(194, 78, 26, 0.18);
+}
+
+.pickle-juice-competition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.pickle-juice-competition-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--cream);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 1.25rem;
+}
+
+.pickle-juice-competition-card .content-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 1.25rem;
+}
+
+.pickle-juice-competition-card .content-subheadline {
+    min-height: 4.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pickle-juice-competition-card .content-text {
+    text-align: center;
+}
+
+.pickle-juice-sponsor-card {
+    display: flex;
+    width: min(100%, 520px);
+    margin: 1.75rem auto 0;
+}
+
 .sponsors-page .sponsor-qr-feature .sponsor-qr-lead {
     margin-bottom: 1rem;
+}
+
+.sponsor-packages-feature {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1.5rem auto 1.75rem;
+}
+
+.sponsor-packages-image {
+    width: min(100%, 680px);
+    height: auto;
+    border-radius: 14px;
+    box-shadow: var(--shadow-lg);
+    display: block;
+}
+
+.sponsors-page .sponsor-qr-feature .sponsor-contact-note {
+    color: var(--primary-color);
+    font-weight: 700;
+    background: var(--accent-soft);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
 }
 
 .sponsor-clover-cta {
@@ -1147,11 +1218,40 @@ section {
     line-height: 1.8;
 }
 
+.merch-printer-feature {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.85rem;
+    background: var(--white);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 1.25rem;
+    margin: 1.5rem auto 2rem;
+    box-shadow: var(--shadow);
+}
+
+.merch-printer-image {
+    width: min(420px, 82vw);
+    max-height: 260px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+}
+
+.merch-printer-caption {
+    max-width: 520px;
+    margin: 0 !important;
+    color: var(--primary-color) !important;
+    font-weight: 700;
+}
+
 .merch-features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
-    margin: 3rem 0;
+    margin: 2.5rem 0 0;
 }
 
 .merch-feature {
@@ -1191,6 +1291,10 @@ section {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 2rem;
+}
+
+.merch-buttons-primary {
+    margin: 1rem 0 1.5rem;
 }
 
 .merch-buttons .btn-secondary {
@@ -1952,6 +2056,18 @@ a, button {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+
+    .pickle-juice-competition-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pickle-juice-competition-card .content-image {
+        height: 220px;
+    }
+
+    .pickle-juice-competition-card .content-subheadline {
+        min-height: unset;
+    }
 }
 
 /* Extra small phones */
@@ -2078,6 +2194,37 @@ a, button {
     height: auto;
     object-fit: contain;
     display: block;
+}
+
+.fivek-feature-block {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.85fr) minmax(0, 1.15fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.fivek-feature-image-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.fivek-feature-image {
+    width: 100% !important;
+    max-width: 420px !important;
+    height: auto !important;
+    margin: 0 !important;
+}
+
+.fivek-feature-copy {
+    text-align: left;
+}
+
+.fivek-feature-copy .content-headline {
+    margin-bottom: 1rem;
+}
+
+.fivek-signup-cta {
+    margin-top: 1.5rem;
 }
 
 .content-section {
@@ -2317,6 +2464,19 @@ html {
     .fivek-presenting-logo {
         width: min(240px, 68vw);
         max-height: 100px;
+    }
+
+    .fivek-feature-block {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .fivek-feature-copy {
+        text-align: center;
+    }
+
+    .fivek-feature-image {
+        max-width: 320px !important;
     }
 }
 

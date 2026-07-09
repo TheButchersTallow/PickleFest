@@ -162,3 +162,21 @@ document.querySelectorAll('[data-randomize-sponsors]').forEach(container => {
         .forEach(card => container.appendChild(card));
 });
 
+document.querySelectorAll('[data-copy-email]').forEach(button => {
+    const email = button.dataset.copyEmail;
+    const defaultText = button.textContent;
+
+    button.addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText(email);
+            button.textContent = 'Email copied!';
+        } catch (error) {
+            button.textContent = email;
+        }
+
+        setTimeout(() => {
+            button.textContent = defaultText;
+        }, 2200);
+    });
+});
+
