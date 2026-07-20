@@ -18,11 +18,32 @@
     --shadow-lg: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     overflow-x: hidden;
+    max-width: 100%;
+}
+
+img,
+video,
+iframe,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+body.menu-open {
+    overflow: hidden;
+    touch-action: none;
 }
 
 .container {
@@ -194,6 +215,55 @@ body {
     color: var(--white);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-item-has-dropdown {
+    position: relative;
+}
+
+.nav-submenu {
+    position: absolute;
+    top: calc(100% + 0.15rem);
+    left: 50%;
+    transform: translateX(-50%) translateY(-4px);
+    list-style: none;
+    margin: 0;
+    padding: 0.15rem 0 0;
+    min-width: max-content;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    z-index: 200;
+}
+
+.nav-item-has-dropdown:hover .nav-submenu,
+.nav-item-has-dropdown:focus-within .nav-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-submenu a {
+    background: transparent;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 0.2rem 0.35rem;
+    text-align: center;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.nav-submenu a:hover {
+    background: transparent;
+    color: var(--dark-color);
+    transform: none;
+    box-shadow: none;
+    text-decoration: underline;
 }
 
 .nav-actions {
@@ -1755,11 +1825,20 @@ a, button {
 
 @media (max-width: 1100px) {
     .nav-menu {
-        display: none;
+        display: none !important;
     }
 
     .navbar-container {
-        grid-template-columns: auto 1fr auto;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 0.75rem;
+    }
+
+    .nav-brand {
+        max-width: calc(100vw - 12rem);
+    }
+
+    .page-content {
+        margin-top: 120px;
     }
 }
 
@@ -2234,8 +2313,149 @@ a, button {
         font-size: 1.75rem;
     }
 
+    .page-subtitle {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
     .container {
         padding: 0 12px;
+    }
+
+    .navbar-container {
+        padding: 0.75rem 0.65rem;
+        min-height: 88px;
+        gap: 0.35rem;
+    }
+
+    .navbar {
+        min-height: 88px;
+    }
+
+    .nav-brand {
+        gap: 0.4rem;
+        max-width: calc(100vw - 9.5rem);
+    }
+
+    .logo-img {
+        height: 44px;
+        max-width: 110px;
+    }
+
+    .sponsor-logo {
+        height: 28px;
+        max-width: 58px;
+    }
+
+    .presenting-sponsor-label {
+        font-size: 0.55rem;
+        letter-spacing: 0.3px;
+    }
+
+    .nav-actions {
+        gap: 0.2rem;
+        padding-right: 0;
+    }
+
+    .nav-social + .nav-social {
+        display: none;
+    }
+
+    .nav-social {
+        width: 34px;
+        height: 34px;
+    }
+
+    .hamburger {
+        min-width: 44px;
+        min-height: 44px;
+        padding: 10px;
+    }
+
+    .hero,
+    .page-content {
+        margin-top: 88px !important;
+    }
+
+    .hero {
+        padding: 96px 0 1.25rem;
+        min-height: auto;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.35;
+        padding: 0 0.25rem;
+    }
+
+    .hero-presenting-sponsor {
+        width: min(100%, 100%);
+        padding: 0.85rem 0.9rem;
+        margin: 0.85rem auto 1rem;
+    }
+
+    .hero-presenting-logo {
+        width: min(220px, 70vw);
+        max-height: 78px;
+    }
+
+    .hero-presenting-name {
+        font-size: 1.05rem;
+        text-align: center;
+    }
+
+    .countdown-item {
+        min-width: 58px;
+        max-width: 72px;
+        padding: 0.75rem 0.35rem;
+    }
+
+    .countdown-number {
+        font-size: 1.85rem;
+    }
+
+    .content-block {
+        padding: 1.1rem;
+    }
+
+    .content-headline {
+        font-size: 1.45rem;
+    }
+
+    .content-subheadline {
+        font-size: 1.2rem;
+    }
+
+    .carshow-hero-sponsor-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        width: min(100%, 280px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sponsor-logo-card {
+        min-height: 110px;
+        padding: 0.85rem;
+    }
+
+    .sponsor-logo-card img {
+        max-height: 80px;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hamburger-menu-dropdown {
+        top: 96px;
+        width: calc(100vw - 1.25rem);
+        max-height: calc(100vh - 110px);
+    }
+
+    .content-image:hover {
+        transform: none;
     }
 }
 

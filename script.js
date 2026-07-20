@@ -3,23 +3,38 @@ const desktopHamburger = document.getElementById('desktopHamburger');
 const hamburgerMenu = document.getElementById('hamburgerMenu');
 
 if (desktopHamburger && hamburgerMenu) {
+    const setMenuOpen = (isOpen) => {
+        hamburgerMenu.classList.toggle('active', isOpen);
+        document.body.classList.toggle('menu-open', isOpen);
+        desktopHamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    };
+
+    desktopHamburger.setAttribute('aria-expanded', 'false');
+    desktopHamburger.setAttribute('aria-controls', 'hamburgerMenu');
+
     desktopHamburger.addEventListener('click', (e) => {
         e.stopPropagation();
-        hamburgerMenu.classList.toggle('active');
+        setMenuOpen(!hamburgerMenu.classList.contains('active'));
     });
 
     // Close dropdown when clicking outside
     document.addEventListener('click', (e) => {
         if (!desktopHamburger.contains(e.target) && !hamburgerMenu.contains(e.target)) {
-            hamburgerMenu.classList.remove('active');
+            setMenuOpen(false);
         }
     });
 
     // Close dropdown when clicking on a link
     hamburgerMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
-            hamburgerMenu.classList.remove('active');
+            setMenuOpen(false);
         });
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1100) {
+            setMenuOpen(false);
+        }
     });
 }
 
