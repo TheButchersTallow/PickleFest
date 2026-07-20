@@ -1025,6 +1025,14 @@ section {
     box-shadow: var(--shadow);
 }
 
+.sponsor-logo-card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    line-height: 0;
+}
+
 .sponsor-logo-card img {
     width: 100%;
     max-width: 100%;
@@ -1053,6 +1061,13 @@ section {
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+}
+
+.competition-sponsor-card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
 }
 
 .competition-sponsor-logo {
@@ -2272,6 +2287,13 @@ a, button {
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
 }
 
+.carshow-hero-sponsor a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+}
+
 .carshow-hero-sponsor-logo {
     width: min(300px, 30vw);
     max-height: 118px;
@@ -2313,6 +2335,13 @@ a, button {
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+}
+
+.fivek-presenting-sponsor a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
 }
 
 .fivek-presenting-logo {
@@ -2444,9 +2473,14 @@ a, button {
     text-align: center;
 }
 
+.live-music-featured-figure a {
+    display: inline-block;
+    line-height: 0;
+}
+
 .live-music-featured-figure .content-image {
     max-width: min(520px, 92vw) !important;
-    margin: 0 auto 0.85rem;
+    margin: 0 auto;
 }
 
 .live-music-featured-figure figcaption {
@@ -2455,6 +2489,7 @@ a, button {
     font-weight: 800;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    margin-bottom: 0.85rem;
 }
 
 .live-music-featured-copy .content-headline {
@@ -2494,6 +2529,11 @@ a, button {
     padding: 0.85rem;
 }
 
+.live-music-gallery figure a {
+    display: block;
+    line-height: 0;
+}
+
 .live-music-gallery .content-image {
     width: 100% !important;
     height: 220px !important;
@@ -2521,6 +2561,13 @@ a, button {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.photo-video-logo-card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
 }
 
 .photo-video-logo {
