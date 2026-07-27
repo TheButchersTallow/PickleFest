@@ -103,11 +103,53 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Smooth scroll for anchor links
+function scrollPageToTop() {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+}
+
+function isHomePage() {
+    const path = window.location.pathname.replace(/\\/g, '/');
+    return /(?:^|\/)(index\.html)?$/.test(path) || path.endsWith('/PickleFest') || path.endsWith('/PickleFest/');
+}
+
+if (isHomePage() && 'scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+// Landing on #home should always be the absolute top of the page
+if (window.location.hash === '#home') {
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+    scrollPageToTop();
+}
+
+if (isHomePage() && (!window.location.hash || window.location.hash === '#home')) {
+    scrollPageToTop();
+}
+
+// Logo / Home links: always scroll fully to top when already on the homepage
+document.querySelectorAll('a.logo-link, a[href="index.html"], a[href="index.html#home"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        if (!isHomePage()) return;
+        e.preventDefault();
+        history.replaceState(null, '', 'index.html');
+        scrollPageToTop();
+        if (typeof hamburgerMenu !== 'undefined' && hamburgerMenu) {
+            hamburgerMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+    });
+});
+
+// Smooth scroll for in-page anchor links (About, etc.)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
-        if (href === '#') return;
+        if (href === '#' || href === '#home') {
+            e.preventDefault();
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+            scrollPageToTop();
+            return;
+        }
         e.preventDefault();
         const target = document.querySelector(href);
         if (target) {
