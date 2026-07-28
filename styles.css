@@ -2317,7 +2317,8 @@ a, button {
         background: #ffffff;
         overflow: visible;
         min-height: 0;
-        box-shadow: 0 1px 0 rgba(45, 90, 39, 0.1);
+        box-shadow: none;
+        border-bottom: none;
     }
 
     .navbar-background {
@@ -2589,6 +2590,8 @@ a, button {
         min-height: auto;
         background: #ffffff;
         overflow: visible;
+        box-shadow: none;
+        border-bottom: none;
     }
 
     .navbar-background {
@@ -3094,11 +3097,8 @@ a, button {
         min-height: auto;
         background: #ffffff;
         overflow: visible;
-    }
-
-    .logo-img {
-        height: 58px;
-        max-width: 140px;
+        box-shadow: none;
+        border-bottom: none;
     }
 
     .sponsor-logo {
