@@ -753,111 +753,29 @@ body.menu-open {
     justify-content: center;
 }
 
-/* Shared pickle-skin bubble for other cards sitewide */
+/* Shared cards: green border, no pickle dots */
 .pickle-bubble,
 .fivek-presenting-sponsor,
-.sponsor-logo-card,
 .competition-sponsor-card,
 .merch-feature {
     border: 2.5px solid #6b9e2e;
     border-radius: 18px;
     overflow: visible;
+    background: var(--white);
     box-shadow:
         inset 0 1px 2px rgba(255, 255, 255, 0.7),
-        inset 0 -2px 5px rgba(74, 124, 35, 0.1),
-        0 10px 28px rgba(45, 90, 39, 0.16),
-        /* Identical edge bumps on every card (N / E / S / W) */
-        0 -8px 0 -4px #4e7d28,
-        8px 0 0 -4px #4e7d28,
-        0 8px 0 -4px #4e7d28,
-        -8px 0 0 -4px #4e7d28;
-    background:
-        radial-gradient(circle at 12% 20%, #4e7d28 0 7px, transparent 8.5px),
-        radial-gradient(circle at 30% 68%, #4e7d28 0 6px, transparent 7.5px),
-        radial-gradient(circle at 52% 28%, #4e7d28 0 8px, transparent 9.5px),
-        radial-gradient(circle at 74% 58%, #4e7d28 0 6.5px, transparent 8px),
-        radial-gradient(circle at 88% 22%, #4e7d28 0 5.5px, transparent 7px),
-        radial-gradient(circle at 18% 88%, #4e7d28 0 6px, transparent 7.5px),
-        linear-gradient(160deg, #fffef4 0%, #f3f9e0 46%, #e7f3c6 100%);
+        0 10px 28px rgba(45, 90, 39, 0.16);
 }
 
-/* Varied inner spots — outer bumps stay identical on every card */
-.sponsor-logo-rotation .sponsor-logo-card:nth-child(6n + 1),
-.merch-features .merch-feature:nth-child(6n + 1),
-.fivek-sponsor-row .fivek-presenting-sponsor:nth-child(6n + 1),
-.content-block:nth-of-type(6n + 1) .competition-sponsor-card {
-    background:
-        radial-gradient(circle at 15% 25%, #4e7d28 0 7.5px, transparent 9px),
-        radial-gradient(circle at 42% 70%, #4e7d28 0 5.5px, transparent 7px),
-        radial-gradient(circle at 70% 18%, #4e7d28 0 8px, transparent 9.5px),
-        radial-gradient(circle at 88% 55%, #4e7d28 0 6px, transparent 7.5px),
-        radial-gradient(circle at 28% 90%, #4e7d28 0 5px, transparent 6.5px),
-        linear-gradient(160deg, #fffef4 0%, #f3f9e0 46%, #e7f3c6 100%);
-}
-
-.sponsor-logo-rotation .sponsor-logo-card:nth-child(6n + 2),
-.merch-features .merch-feature:nth-child(6n + 2),
-.fivek-sponsor-row .fivek-presenting-sponsor:nth-child(6n + 2),
-.content-block:nth-of-type(6n + 2) .competition-sponsor-card {
-    background:
-        radial-gradient(circle at 8% 60%, #4e7d28 0 6px, transparent 7.5px),
-        radial-gradient(circle at 35% 15%, #4e7d28 0 8.5px, transparent 10px),
-        radial-gradient(circle at 58% 78%, #4e7d28 0 5.5px, transparent 7px),
-        radial-gradient(circle at 82% 35%, #4e7d28 0 7px, transparent 8.5px),
-        radial-gradient(circle at 95% 85%, #4e7d28 0 4.5px, transparent 6px),
-        linear-gradient(155deg, #fffef4 0%, #f3f9e0 46%, #e7f3c6 100%);
-}
-
-.sponsor-logo-rotation .sponsor-logo-card:nth-child(6n + 3),
-.merch-features .merch-feature:nth-child(6n + 3),
-.fivek-sponsor-row .fivek-presenting-sponsor:nth-child(6n + 3),
-.content-block:nth-of-type(6n + 3) .competition-sponsor-card {
-    background:
-        radial-gradient(circle at 22% 80%, #4e7d28 0 7px, transparent 8.5px),
-        radial-gradient(circle at 48% 22%, #4e7d28 0 6px, transparent 7.5px),
-        radial-gradient(circle at 65% 60%, #4e7d28 0 9px, transparent 10.5px),
-        radial-gradient(circle at 90% 12%, #4e7d28 0 5px, transparent 6.5px),
-        radial-gradient(circle at 10% 35%, #4e7d28 0 5.5px, transparent 7px),
-        linear-gradient(170deg, #fffef4 0%, #f3f9e0 46%, #e7f3c6 100%);
-}
-
-.sponsor-logo-rotation .sponsor-logo-card:nth-child(6n + 4),
-.merch-features .merch-feature:nth-child(6n + 4),
-.fivek-sponsor-row .fivek-presenting-sponsor:nth-child(6n + 4),
-.content-block:nth-of-type(6n + 4) .competition-sponsor-card {
-    background:
-        radial-gradient(circle at 18% 40%, #4e7d28 0 8px, transparent 9.5px),
-        radial-gradient(circle at 40% 85%, #4e7d28 0 5px, transparent 6.5px),
-        radial-gradient(circle at 72% 30%, #4e7d28 0 6.5px, transparent 8px),
-        radial-gradient(circle at 92% 68%, #4e7d28 0 7px, transparent 8.5px),
-        radial-gradient(circle at 55% 8%, #4e7d28 0 4.5px, transparent 6px),
-        linear-gradient(145deg, #fffef4 0%, #f3f9e0 46%, #e7f3c6 100%);
-}
-
-.sponsor-logo-rotation .sponsor-logo-card:nth-child(6n + 5),
-.merch-features .merch-feature:nth-child(6n + 5),
-.fivek-sponsor-row .fivek-presenting-sponsor:nth-child(6n + 5),
-.content-block:nth-of-type(6n + 5) .competition-sponsor-card {
-    background:
-        radial-gradient(circle at 5% 20%, #4e7d28 0 5.5px, transparent 7px),
-        radial-gradient(circle at 30% 55%, #4e7d28 0 8px, transparent 9.5px),
-        radial-gradient(circle at 60% 90%, #4e7d28 0 6px, transparent 7.5px),
-        radial-gradient(circle at 78% 25%, #4e7d28 0 7.5px, transparent 9px),
-        radial-gradient(circle at 95% 50%, #4e7d28 0 5px, transparent 6.5px),
-        linear-gradient(165deg, #fffef4 0%, #f3f9e0 46%, #e7f3c6 100%);
-}
-
-.sponsor-logo-rotation .sponsor-logo-card:nth-child(6n + 6),
-.merch-features .merch-feature:nth-child(6n + 6),
-.fivek-sponsor-row .fivek-presenting-sponsor:nth-child(6n + 6),
-.content-block:nth-of-type(6n + 6) .competition-sponsor-card {
-    background:
-        radial-gradient(circle at 25% 12%, #4e7d28 0 6.5px, transparent 8px),
-        radial-gradient(circle at 50% 48%, #4e7d28 0 7px, transparent 8.5px),
-        radial-gradient(circle at 75% 82%, #4e7d28 0 5.5px, transparent 7px),
-        radial-gradient(circle at 12% 75%, #4e7d28 0 8px, transparent 9.5px),
-        radial-gradient(circle at 88% 30%, #4e7d28 0 6px, transparent 7.5px),
-        linear-gradient(150deg, #fffef4 0%, #f3f9e0 46%, #e7f3c6 100%);
+/* Sponsor logo cards: green border, no pickle dots */
+.sponsor-logo-card {
+    border: 2.5px solid #6b9e2e;
+    border-radius: 18px;
+    overflow: visible;
+    background: var(--white);
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.7),
+        0 10px 28px rgba(45, 90, 39, 0.16);
 }
 
 .hero-sponsor-bubble-presenting {
@@ -1607,7 +1525,7 @@ section {
 .sponsor-logo-rotation {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 1.75rem;
+    gap: 1.35rem;
     width: 100%;
     margin: 2rem auto 1.5rem;
     overflow: visible;
@@ -1617,8 +1535,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 170px;
-    padding: 1.25rem;
+    min-height: 140px;
+    padding: 0.9rem;
 }
 
 .sponsor-logo-card a {
@@ -1632,7 +1550,7 @@ section {
 .sponsor-logo-card img {
     width: 100%;
     max-width: 100%;
-    max-height: 130px;
+    max-height: 105px;
     height: auto;
     object-fit: contain;
     display: block;
@@ -1788,11 +1706,11 @@ section {
     }
 
     .sponsor-logo-card {
-        min-height: 140px;
+        min-height: 120px;
     }
 
     .sponsor-logo-card img {
-        max-height: 100px;
+        max-height: 85px;
     }
 }
 
@@ -3745,6 +3663,80 @@ html {
 
     .photo-video-links {
         justify-content: center;
+    }
+}
+
+/* Travel / hotels page */
+.travel-page-hero {
+    padding: 2.5rem 0 2rem;
+}
+
+.travel-feature {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.travel-call-note {
+    font-weight: 600;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.travel-hotel-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.travel-hotel-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.35rem 1.25rem;
+    padding: 1rem 1.15rem;
+    border-left: 4px solid var(--primary-color);
+    background: linear-gradient(90deg, rgba(154, 205, 50, 0.12) 0%, rgba(241, 248, 233, 0.6) 100%);
+}
+
+.travel-hotel-name {
+    font-weight: 600;
+    color: var(--text-color);
+    flex: 1 1 220px;
+}
+
+.travel-hotel-phone {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--dark-color);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.travel-hotel-phone:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.travel-hotel-photo {
+    margin: 1.5rem 0 0.5rem;
+    text-align: center;
+}
+
+.travel-hero-img {
+    display: inline-block;
+    width: auto;
+    max-width: min(560px, 90vw);
+    height: auto;
+}
+
+@media (max-width: 640px) {
+    .travel-hotel-list li {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
