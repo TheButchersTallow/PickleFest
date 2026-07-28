@@ -2313,32 +2313,91 @@ a, button {
 }
 
 @media (max-width: 1180px) {
-    .nav-menu {
+    /* Free space for tabs: hide presenting / premier from the top bar */
+    .sponsor-logo-wrapper {
         display: none !important;
     }
 
     .navbar-container {
         grid-template-columns: minmax(0, 1fr) auto;
-        gap: 0.75rem;
-        padding-left: 0.25rem;
+        grid-template-rows: auto auto;
+        gap: 0.45rem 0.75rem;
+        padding: 0.65rem 0.75rem 0.55rem;
+        align-items: center;
     }
 
     .nav-brand {
-        max-width: calc(100vw - 12rem);
-        gap: 0.75rem;
+        max-width: none;
+        gap: 0.5rem;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .nav-actions {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    /* Show clickable tabs on a second row (scroll if needed) */
+    .nav-menu {
+        display: flex !important;
+        position: static;
+        left: auto;
+        top: auto;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.35rem;
+        width: 100%;
+        max-width: 100%;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        padding: 0.15rem 0 0.25rem;
+        margin: 0;
+        background: transparent;
+        box-shadow: none;
+        overflow-x: auto;
+        overflow-y: visible;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .nav-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-menu li {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .nav-menu > li > a {
+        font-size: 0.68rem;
+        padding: 0.42rem 0.7rem;
+        white-space: nowrap;
+        margin: 0;
+        width: auto;
+        display: block;
+    }
+
+    .nav-submenu {
+        display: none;
     }
 
     .logo-img {
-        height: 98px;
-        max-width: 250px;
+        height: 72px;
+        max-width: 190px;
     }
 
     .page-content {
-        margin-top: 120px;
+        margin-top: 130px;
     }
 
     .hero {
-        margin-top: 120px;
+        margin-top: 130px;
     }
 }
 
@@ -2370,17 +2429,17 @@ a, button {
         gap: 1rem;
         margin-left: 0;
         left: auto;
-        max-width: calc(100vw - 11rem);
+        max-width: none;
     }
 
     .navbar-container {
-        padding: 1.5rem 1.5rem;
-        min-height: 120px;
-        gap: 1rem;
+        padding: 0.85rem 1rem 0.65rem;
+        min-height: auto;
+        gap: 0.4rem 0.75rem;
     }
     
     .navbar {
-        min-height: 120px;
+        min-height: auto;
     }
 
     .navbar-background {
@@ -2388,34 +2447,36 @@ a, button {
     }
 
     .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
-        flex-direction: column;
-        background: var(--white);
+        position: static;
+        left: auto;
+        top: auto;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        background: transparent;
         width: 100%;
         text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-        padding: 1.5rem 0;
-        gap: 0;
+        box-shadow: none;
+        padding: 0.1rem 0 0.2rem;
+        gap: 0.3rem;
         justify-content: flex-start;
+        overflow-x: auto;
     }
 
     .nav-menu.active {
-        left: 0;
+        left: auto;
     }
 
     .nav-menu li {
-        width: 100%;
+        width: auto;
     }
 
     .nav-menu > li > a {
-        padding: 1rem 1.5rem;
+        padding: 0.4rem 0.65rem;
         display: block;
-        width: 100%;
+        width: auto;
         border-radius: 999px;
-        margin: 0.25rem 0;
+        margin: 0;
+        font-size: 0.65rem;
     }
 
     .nav-menu > li > a:hover {
@@ -2441,8 +2502,8 @@ a, button {
 
     .hero {
         padding: 0.5rem 0 1.5rem;
-        margin-top: 120px;
-        min-height: calc(100vh - 120px);
+        margin-top: 130px;
+        min-height: calc(100vh - 130px);
     }
 
     .hero-content {
@@ -2857,18 +2918,18 @@ a, button {
     }
 
     .navbar-container {
-        padding: 0.75rem 0.65rem;
-        min-height: 88px;
-        gap: 0.35rem;
+        padding: 0.55rem 0.65rem 0.45rem;
+        min-height: auto;
+        gap: 0.3rem 0.5rem;
     }
 
     .navbar {
-        min-height: 88px;
+        min-height: auto;
     }
 
     .nav-brand {
         gap: 0.4rem;
-        max-width: calc(100vw - 9.5rem);
+        max-width: none;
     }
 
     .logo-img {
@@ -2876,31 +2937,9 @@ a, button {
         max-width: 110px;
     }
 
-    .sponsor-logo {
-        height: 28px;
-        max-width: 58px;
-    }
-
-    .presenting-sponsor-label {
-        font-size: 0.55rem;
-        letter-spacing: 0.3px;
-    }
-
-    .sponsor-logo-wrapper {
-        gap: 0.4rem;
-    }
-
-    .premier-sponsor-under-nav {
-        padding-left: 0.4rem;
-    }
-
-    .premier-sponsor-under-nav .premier-sponsor-label {
-        font-size: 0.45rem;
-    }
-
-    .premier-sponsor-under-nav .premier-sponsor-logo {
-        width: 52px;
-        max-height: 20px;
+    .nav-menu > li > a {
+        font-size: 0.6rem;
+        padding: 0.35rem 0.55rem;
     }
 
     .nav-actions {
@@ -2925,7 +2964,7 @@ a, button {
 
     .hero,
     .page-content {
-        margin-top: 88px !important;
+        margin-top: 110px !important;
     }
 
     .hero {
