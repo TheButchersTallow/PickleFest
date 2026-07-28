@@ -275,56 +275,12 @@ body.menu-open {
         4px 0 0 -2px #4e7d28,
         0 4px 0 -2px #4e7d28,
         -4px 0 0 -2px #4e7d28;
+    /* Same dots on every tab / every page */
     background:
-        radial-gradient(circle at 14% 38%, #4e7d28 0 2.8px, transparent 3.4px),
-        radial-gradient(circle at 38% 62%, #4e7d28 0 2.4px, transparent 3px),
-        radial-gradient(circle at 62% 32%, #4e7d28 0 2.6px, transparent 3.2px),
-        radial-gradient(circle at 86% 58%, #4e7d28 0 2.3px, transparent 2.9px),
-        linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
-}
-
-.nav-menu > li:nth-child(5n + 1) > a {
-    background:
-        radial-gradient(circle at 18% 30%, #4e7d28 0 2.9px, transparent 3.5px),
-        radial-gradient(circle at 48% 70%, #4e7d28 0 2.2px, transparent 2.8px),
-        radial-gradient(circle at 78% 40%, #4e7d28 0 2.7px, transparent 3.3px),
-        radial-gradient(circle at 92% 72%, #4e7d28 0 2px, transparent 2.6px),
-        linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
-}
-
-.nav-menu > li:nth-child(5n + 2) > a {
-    background:
-        radial-gradient(circle at 10% 55%, #4e7d28 0 2.5px, transparent 3.1px),
-        radial-gradient(circle at 35% 28%, #4e7d28 0 3px, transparent 3.6px),
-        radial-gradient(circle at 58% 68%, #4e7d28 0 2.3px, transparent 2.9px),
-        radial-gradient(circle at 84% 42%, #4e7d28 0 2.6px, transparent 3.2px),
-        linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
-}
-
-.nav-menu > li:nth-child(5n + 3) > a {
-    background:
-        radial-gradient(circle at 22% 66%, #4e7d28 0 2.4px, transparent 3px),
-        radial-gradient(circle at 44% 24%, #4e7d28 0 2.8px, transparent 3.4px),
-        radial-gradient(circle at 70% 52%, #4e7d28 0 3.1px, transparent 3.7px),
-        radial-gradient(circle at 90% 30%, #4e7d28 0 2.1px, transparent 2.7px),
-        linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
-}
-
-.nav-menu > li:nth-child(5n + 4) > a {
-    background:
-        radial-gradient(circle at 16% 42%, #4e7d28 0 3px, transparent 3.6px),
-        radial-gradient(circle at 42% 78%, #4e7d28 0 2.2px, transparent 2.8px),
-        radial-gradient(circle at 66% 22%, #4e7d28 0 2.5px, transparent 3.1px),
-        radial-gradient(circle at 88% 60%, #4e7d28 0 2.7px, transparent 3.3px),
-        linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
-}
-
-.nav-menu > li:nth-child(5n + 5) > a {
-    background:
-        radial-gradient(circle at 12% 24%, #4e7d28 0 2.3px, transparent 2.9px),
-        radial-gradient(circle at 40% 48%, #4e7d28 0 2.9px, transparent 3.5px),
-        radial-gradient(circle at 64% 76%, #4e7d28 0 2.4px, transparent 3px),
-        radial-gradient(circle at 82% 34%, #4e7d28 0 2.6px, transparent 3.2px),
+        radial-gradient(circle at 18% 40%, #4e7d28 0 2.5px, transparent 3.1px),
+        radial-gradient(circle at 42% 62%, #4e7d28 0 2.3px, transparent 2.9px),
+        radial-gradient(circle at 68% 36%, #4e7d28 0 2.5px, transparent 3.1px),
+        radial-gradient(circle at 86% 58%, #4e7d28 0 2.2px, transparent 2.8px),
         linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
 }
 
@@ -2497,7 +2453,7 @@ a, button {
         display: block;
     }
 
-    /* Match main site pickle pills: dark green border + dots */
+    /* Match main site pickle pills: dark green border + same dots on every tab */
     .nav-menu > li > a,
     .nav-menu > li:nth-child(n) > a {
         font-size: 0.68rem;
@@ -2522,55 +2478,10 @@ a, button {
             0 3px 0 -1.5px #4e7d28,
             -3px 0 0 -1.5px #4e7d28;
         background:
-            radial-gradient(circle at 18% 40%, #4e7d28 0 2.2px, transparent 2.8px),
-            radial-gradient(circle at 42% 62%, #4e7d28 0 2px, transparent 2.6px),
-            radial-gradient(circle at 68% 36%, #4e7d28 0 2.2px, transparent 2.8px),
-            radial-gradient(circle at 86% 58%, #4e7d28 0 1.9px, transparent 2.5px),
-            linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
-    }
-
-    .nav-menu > li:nth-child(5n + 1) > a {
-        background:
-            radial-gradient(circle at 18% 30%, #4e7d28 0 2.3px, transparent 2.9px),
-            radial-gradient(circle at 48% 70%, #4e7d28 0 1.9px, transparent 2.5px),
-            radial-gradient(circle at 78% 40%, #4e7d28 0 2.2px, transparent 2.8px),
-            radial-gradient(circle at 92% 72%, #4e7d28 0 1.7px, transparent 2.3px),
-            linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
-    }
-
-    .nav-menu > li:nth-child(5n + 2) > a {
-        background:
-            radial-gradient(circle at 10% 55%, #4e7d28 0 2.1px, transparent 2.7px),
-            radial-gradient(circle at 35% 28%, #4e7d28 0 2.4px, transparent 3px),
-            radial-gradient(circle at 58% 68%, #4e7d28 0 2px, transparent 2.6px),
-            radial-gradient(circle at 84% 42%, #4e7d28 0 2.2px, transparent 2.8px),
-            linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
-    }
-
-    .nav-menu > li:nth-child(5n + 3) > a {
-        background:
-            radial-gradient(circle at 22% 66%, #4e7d28 0 2px, transparent 2.6px),
-            radial-gradient(circle at 44% 24%, #4e7d28 0 2.3px, transparent 2.9px),
-            radial-gradient(circle at 70% 52%, #4e7d28 0 2.5px, transparent 3.1px),
-            radial-gradient(circle at 90% 30%, #4e7d28 0 1.8px, transparent 2.4px),
-            linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
-    }
-
-    .nav-menu > li:nth-child(5n + 4) > a {
-        background:
-            radial-gradient(circle at 16% 42%, #4e7d28 0 2.4px, transparent 3px),
-            radial-gradient(circle at 42% 78%, #4e7d28 0 1.9px, transparent 2.5px),
-            radial-gradient(circle at 66% 22%, #4e7d28 0 2.1px, transparent 2.7px),
-            radial-gradient(circle at 88% 60%, #4e7d28 0 2.2px, transparent 2.8px),
-            linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
-    }
-
-    .nav-menu > li:nth-child(5n + 5) > a {
-        background:
-            radial-gradient(circle at 12% 24%, #4e7d28 0 2px, transparent 2.6px),
-            radial-gradient(circle at 40% 48%, #4e7d28 0 2.3px, transparent 2.9px),
-            radial-gradient(circle at 64% 76%, #4e7d28 0 2px, transparent 2.6px),
-            radial-gradient(circle at 82% 34%, #4e7d28 0 2.2px, transparent 2.8px),
+            radial-gradient(circle at 18% 40%, #4e7d28 0 2.5px, transparent 3.1px),
+            radial-gradient(circle at 42% 62%, #4e7d28 0 2.3px, transparent 2.9px),
+            radial-gradient(circle at 68% 36%, #4e7d28 0 2.5px, transparent 3.1px),
+            radial-gradient(circle at 86% 58%, #4e7d28 0 2.2px, transparent 2.8px),
             linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
     }
 
@@ -2585,11 +2496,11 @@ a, button {
     }
 
     .page-content {
-        margin-top: 145px;
+        margin-top: var(--header-offset, 220px);
     }
 
     .hero {
-        margin-top: 145px;
+        margin-top: var(--header-offset, 220px);
     }
 
     /* Don't let Paddy/countdown pull up over the welcome title */
@@ -2604,6 +2515,8 @@ a, button {
         font-size: clamp(1.85rem, 5.5vw, 2.75rem);
         line-height: 1.2;
         padding: 0 0.5rem;
+        position: relative;
+        z-index: 1;
     }
 
     .hero-subtitle {
@@ -2713,12 +2626,12 @@ a, button {
 
     .hero {
         padding: 0.5rem 0 1.5rem;
-        margin-top: 135px;
-        min-height: calc(100vh - 135px);
+        margin-top: var(--header-offset, 220px);
+        min-height: calc(100vh - var(--header-offset, 220px));
     }
 
     .page-content {
-        margin-top: 135px;
+        margin-top: var(--header-offset, 220px);
     }
 
     .hero-content {
@@ -2866,12 +2779,12 @@ a, button {
 
     .hero {
         padding: 0.45rem 0 1.25rem;
-        margin-top: 100px;
-        min-height: calc(100vh - 100px);
+        margin-top: var(--header-offset, 220px);
+        min-height: calc(100vh - var(--header-offset, 220px));
     }
 
     .page-content {
-        margin-top: 105px !important;
+        margin-top: var(--header-offset, 220px) !important;
     }
 
     .nav-actions {
@@ -3203,7 +3116,7 @@ a, button {
 
     .hero,
     .page-content {
-        margin-top: 125px !important;
+        margin-top: var(--header-offset, 210px) !important;
     }
 
     .hero {

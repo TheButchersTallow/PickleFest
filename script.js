@@ -237,3 +237,25 @@ document.querySelectorAll('[data-copy-email]').forEach(button => {
     });
 });
 
+/* Keep page content below the fixed mobile header (logo + tab grid) */
+(function syncHeaderOffset() {
+    const nav = document.querySelector('.navbar');
+    if (!nav) return;
+
+    const applyOffset = () => {
+        if (window.innerWidth > 1180) {
+            document.documentElement.style.removeProperty('--header-offset');
+            return;
+        }
+        const height = Math.ceil(nav.getBoundingClientRect().height);
+        document.documentElement.style.setProperty('--header-offset', `${height + 10}px`);
+    };
+
+    applyOffset();
+    window.addEventListener('resize', applyOffset);
+    window.addEventListener('load', applyOffset);
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(applyOffset);
+    }
+})();
+
