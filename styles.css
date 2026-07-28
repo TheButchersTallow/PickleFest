@@ -160,6 +160,38 @@ body.menu-open {
     opacity: 0.85;
 }
 
+.nav-logo-cluster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    flex-shrink: 0;
+}
+
+.nav-home-label {
+    display: none;
+}
+
+body:not(.page-home) .nav-home-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--dark-color);
+    text-decoration: none;
+    line-height: 1;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(154, 205, 50, 0.18);
+    border: 1px solid rgba(74, 124, 35, 0.3);
+}
+
+body:not(.page-home) .nav-home-label:hover {
+    background: rgba(154, 205, 50, 0.32);
+    color: #2d5a27;
+}
+
 .logo-img {
     height: 110px;
     width: auto;
@@ -2341,13 +2373,6 @@ a, button {
         max-width: none;
     }
 
-    .logo-link {
-        grid-column: 1;
-        grid-row: 1;
-        justify-self: center;
-        align-self: center;
-    }
-
     .sponsor-logo-wrapper {
         display: contents;
     }
@@ -2402,8 +2427,8 @@ a, button {
     }
 
     .logo-img {
-        height: 78px;
-        max-width: 200px;
+        height: 92px;
+        max-width: 230px;
         width: auto;
     }
 
@@ -2425,6 +2450,44 @@ a, button {
         min-width: 48px;
         min-height: 48px;
         padding: 10px;
+    }
+
+    .nav-logo-cluster {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.15rem;
+    }
+
+    .logo-link {
+        grid-column: auto;
+        grid-row: auto;
+        justify-self: auto;
+        align-self: auto;
+    }
+
+    body:not(.page-home) .nav-home-label {
+        display: inline-block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--dark-color);
+        text-decoration: none;
+        line-height: 1;
+        padding: 0.15rem 0.45rem;
+        border-radius: 999px;
+        background: rgba(154, 205, 50, 0.2);
+        border: 1px solid rgba(74, 124, 35, 0.35);
+    }
+
+    body:not(.page-home) .nav-home-label:hover {
+        background: rgba(154, 205, 50, 0.35);
+        color: #2d5a27;
     }
 
     .nav-menu {
@@ -2558,11 +2621,11 @@ a, button {
     }
 
     .page-content {
-        margin-top: 190px;
+        margin-top: 145px;
     }
 
     .hero {
-        margin-top: 190px;
+        margin-top: 145px;
     }
 }
 
@@ -2573,9 +2636,9 @@ a, button {
     }
 
     .logo-img {
-        height: 68px;
+        height: 80px;
         width: auto;
-        max-width: 170px;
+        max-width: 195px;
         object-fit: contain;
     }
 
@@ -2667,12 +2730,12 @@ a, button {
 
     .hero {
         padding: 0.5rem 0 1.5rem;
-        margin-top: 175px;
-        min-height: calc(100vh - 175px);
+        margin-top: 135px;
+        min-height: calc(100vh - 135px);
     }
 
     .page-content {
-        margin-top: 175px;
+        margin-top: 135px;
     }
 
     .hero-content {
@@ -2785,9 +2848,9 @@ a, button {
     }
 
     .logo-img {
-        height: 50px;
+        height: 80px;
         width: auto;
-        max-width: 140px;
+        max-width: 195px;
         object-fit: contain;
     }
 
@@ -3019,7 +3082,8 @@ a, button {
     }
 
     .logo-img {
-        max-width: 120px;
+        height: 70px;
+        max-width: 170px;
     }
 
     .sponsor-logo {
@@ -3156,7 +3220,7 @@ a, button {
 
     .hero,
     .page-content {
-        margin-top: 160px !important;
+        margin-top: 125px !important;
     }
 
     .hero {
