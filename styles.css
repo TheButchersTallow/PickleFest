@@ -2693,6 +2693,10 @@ a, button {
         flex: unset;
     }
 
+    .nav-menu > li:has(> a[href="index.html"]) {
+        display: none !important;
+    }
+
     .nav-menu > li:has(> a[href="merch.html"]),
     .nav-menu > li:has(> a[href="sponsors.html"]),
     .nav-menu > li:has(> a[href="competitions.html"]),
@@ -2701,6 +2705,14 @@ a, button {
     .nav-menu > li:has(> a[href="travel.html"]) {
         display: block;
     }
+
+    /* Keep Travel centered in the bottom row (not pushed far right) */
+    .nav-menu > li:has(> a[href="merch.html"]) { grid-column: 1; grid-row: 1; }
+    .nav-menu > li:has(> a[href="sponsors.html"]) { grid-column: 2; grid-row: 1; }
+    .nav-menu > li:has(> a[href="competitions.html"]) { grid-column: 3; grid-row: 1; }
+    .nav-menu > li:has(> a[href="carshow.html"]) { grid-column: 1; grid-row: 2; }
+    .nav-menu > li:has(> a[href="travel.html"]) { grid-column: 2; grid-row: 2; }
+    .nav-menu > li:has(> a[href="5krun.html"]) { grid-column: 3; grid-row: 2; }
 
     /* Solid smooth pickle pills */
     .nav-menu > li > a,
@@ -4315,21 +4327,81 @@ html {
 }
 
 .travel-hotel-photo {
-    margin: 1.5rem 0 0.5rem;
+    margin: 1.5rem auto 0.5rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .travel-hero-img {
-    display: inline-block;
-    width: auto;
-    max-width: min(560px, 90vw);
+    display: block;
+    width: 100%;
+    max-width: min(560px, 100%);
     height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+@media (max-width: 1180px) {
+    .travel-hotel-photo {
+        margin: 1.25rem auto 0.75rem;
+    }
+
+    .travel-hero-img {
+        max-width: min(420px, 92%);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .travel-hotel-list {
+        gap: 0.65rem;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    .travel-hotel-list li {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 0.2rem;
+        padding: 0.85rem 1rem;
+    }
+
+    .travel-hotel-name {
+        flex: none;
+        width: 100%;
+        font-size: 0.98rem;
+        line-height: 1.25;
+    }
+
+    .travel-hotel-phone {
+        flex: none;
+        font-size: 1rem;
+        margin-top: 0;
+    }
+
+    .travel-call-note {
+        text-align: center;
+    }
 }
 
 @media (max-width: 640px) {
     .travel-hotel-list li {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        gap: 0.15rem;
+        padding: 0.8rem 0.9rem;
+    }
+
+    .travel-hotel-name {
+        font-size: 0.92rem;
+    }
+
+    .travel-hotel-phone {
+        font-size: 0.95rem;
     }
 }
 
