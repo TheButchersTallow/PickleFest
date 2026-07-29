@@ -234,10 +234,10 @@ body.menu-open {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 0.55rem;
+    gap: 0.75rem;
     align-items: center;
     margin: 0;
-    padding: 0.35rem 0;
+    padding: 0.35rem 0.15rem;
     justify-content: center;
     flex-wrap: nowrap;
     min-width: 0;
@@ -265,22 +265,73 @@ body.menu-open {
     text-align: center;
     text-shadow: 0 1px 1px rgba(45, 90, 39, 0.35);
     border-radius: 999px;
-    border: 1.5px solid #4a7c23;
-    overflow: visible;
-    /* Identical edge bumps on every pill (N / E / S / W) */
+    border: 2.5px solid #3a681c;
+    overflow: hidden;
+    /* Solid pickle edge — no choppy outer bumps */
     box-shadow:
-        inset 0 1px 1px rgba(255, 255, 255, 0.4),
-        0 2px 6px rgba(45, 90, 39, 0.22),
-        0 -4px 0 -2px #4e7d28,
-        4px 0 0 -2px #4e7d28,
-        0 4px 0 -2px #4e7d28,
-        -4px 0 0 -2px #4e7d28;
-    /* Same dots on every tab / every page */
+        inset 0 1px 1px rgba(255, 255, 255, 0.45),
+        inset 0 -1px 2px rgba(45, 90, 39, 0.18),
+        0 2px 6px rgba(45, 90, 39, 0.16);
     background:
         radial-gradient(circle at 18% 40%, #4e7d28 0 2.5px, transparent 3.1px),
         radial-gradient(circle at 42% 62%, #4e7d28 0 2.3px, transparent 2.9px),
         radial-gradient(circle at 68% 36%, #4e7d28 0 2.5px, transparent 3.1px),
         radial-gradient(circle at 86% 58%, #4e7d28 0 2.2px, transparent 2.8px),
+        linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
+}
+
+/* Per-tab spot patterns (href-based so they stay stable across pages) */
+.nav-menu > li > a[href="merch.html"] {
+    background:
+        radial-gradient(circle at 16% 32%, #4e7d28 0 2.6px, transparent 3.2px),
+        radial-gradient(circle at 38% 70%, #4e7d28 0 2.1px, transparent 2.7px),
+        radial-gradient(circle at 58% 28%, #4e7d28 0 2.8px, transparent 3.4px),
+        radial-gradient(circle at 82% 55%, #4e7d28 0 2.3px, transparent 2.9px),
+        linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
+}
+
+.nav-menu > li > a[href="sponsors.html"] {
+    background:
+        radial-gradient(circle at 22% 58%, #4e7d28 0 2.4px, transparent 3px),
+        radial-gradient(circle at 45% 22%, #4e7d28 0 2.7px, transparent 3.3px),
+        radial-gradient(circle at 70% 68%, #4e7d28 0 2.2px, transparent 2.8px),
+        radial-gradient(circle at 88% 38%, #4e7d28 0 2.5px, transparent 3.1px),
+        linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
+}
+
+.nav-menu > li > a[href="competitions.html"] {
+    background:
+        radial-gradient(circle at 12% 48%, #4e7d28 0 2.8px, transparent 3.4px),
+        radial-gradient(circle at 40% 25%, #4e7d28 0 2.2px, transparent 2.8px),
+        radial-gradient(circle at 62% 72%, #4e7d28 0 2.6px, transparent 3.2px),
+        radial-gradient(circle at 85% 45%, #4e7d28 0 2.1px, transparent 2.7px),
+        linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
+}
+
+.nav-menu > li > a[href="carshow.html"] {
+    background:
+        radial-gradient(circle at 20% 28%, #4e7d28 0 2.3px, transparent 2.9px),
+        radial-gradient(circle at 48% 60%, #4e7d28 0 2.9px, transparent 3.5px),
+        radial-gradient(circle at 72% 30%, #4e7d28 0 2.1px, transparent 2.7px),
+        radial-gradient(circle at 90% 65%, #4e7d28 0 2.4px, transparent 3px),
+        linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
+}
+
+.nav-menu > li > a[href="5krun.html"] {
+    background:
+        radial-gradient(circle at 15% 62%, #4e7d28 0 2.5px, transparent 3.1px),
+        radial-gradient(circle at 42% 30%, #4e7d28 0 2.4px, transparent 3px),
+        radial-gradient(circle at 65% 55%, #4e7d28 0 2.7px, transparent 3.3px),
+        radial-gradient(circle at 88% 28%, #4e7d28 0 2px, transparent 2.6px),
+        linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
+}
+
+.nav-menu > li > a[href="travel.html"] {
+    background:
+        radial-gradient(circle at 25% 35%, #4e7d28 0 2.6px, transparent 3.2px),
+        radial-gradient(circle at 50% 72%, #4e7d28 0 2.2px, transparent 2.8px),
+        radial-gradient(circle at 75% 25%, #4e7d28 0 2.5px, transparent 3.1px),
+        radial-gradient(circle at 92% 52%, #4e7d28 0 2.3px, transparent 2.9px),
         linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
 }
 
@@ -593,6 +644,203 @@ body.menu-open {
     margin-top: 120px;
 }
 
+/* Home page only: festival photo behind title, Patty, and countdown */
+.hero-home {
+    background-color: #2d5a27;
+    background-image: url("assets/picklefest/pickle fest home page.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-home .hero-overlay {
+    background: linear-gradient(
+        180deg,
+        rgba(20, 45, 12, 0.42) 0%,
+        rgba(20, 45, 12, 0.18) 40%,
+        rgba(20, 45, 12, 0.28) 100%
+    );
+}
+
+/* Home: welcome top; RRCU + ITNS stacked left; countdown above Patty far right */
+.hero-home .hero-content {
+    max-width: 1760px;
+    padding: 0 1.25rem 0 0;
+}
+
+.hero-home .hero-home-headline {
+    text-align: center;
+    width: 100%;
+}
+
+.hero-home .hero-home-headline .hero-title {
+    white-space: normal;
+    font-size: clamp(2.1rem, 3.6vw, 3.4rem);
+    line-height: 1.15;
+}
+
+.hero-home .hero-home-headline .hero-subtitle {
+    margin-bottom: 0;
+}
+
+.hero-home .hero-home-stage {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 1.35rem;
+    min-height: min(52vh, 560px);
+}
+
+.hero-home .hero-home-sponsors {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: min(340px, 30vw);
+    margin-left: -2.5rem;
+    margin-right: auto;
+    margin-top: 5.75rem;
+    align-self: flex-start;
+    z-index: 2;
+}
+
+.hero-home .hero-home-sponsors .hero-sponsor-bubble {
+    border-radius: 18px;
+    background: var(--white);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+    width: 100%;
+}
+
+.hero-home .hero-home-sponsors .hero-sponsor-bubble-presenting {
+    padding: 1.35rem 1.4rem;
+}
+
+.hero-home .hero-home-sponsors .hero-sponsor-bubble-premier {
+    padding: 0.85rem 1rem;
+    width: 78%;
+    align-self: flex-start;
+}
+
+.hero-home .hero-home-sponsors .hero-sponsor-col {
+    gap: 0.4rem;
+}
+
+.hero-home .hero-home-sponsors .hero-presenting-label {
+    font-size: clamp(0.88rem, 1.3vw, 1.08rem);
+    letter-spacing: 0.06em;
+}
+
+.hero-home .hero-home-sponsors .premier-sponsor-label {
+    font-size: clamp(0.7rem, 1vw, 0.85rem);
+    letter-spacing: 0.06em;
+}
+
+.hero-home .hero-home-sponsors .hero-presenting-logo {
+    width: min(300px, 100%);
+    max-height: 120px;
+}
+
+.hero-home .hero-home-sponsors .hero-presenting-name {
+    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+}
+
+.hero-home .hero-home-sponsors .premier-sponsor-logo {
+    width: min(140px, 100%);
+    max-height: 58px;
+}
+
+.hero-home .hero-home-aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    width: min(440px, 38vw);
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: -0.5rem;
+    align-self: flex-start;
+    z-index: 2;
+}
+
+.hero-home .hero-paddy-wrapper {
+    position: relative;
+    margin: 0;
+    align-self: center;
+    overflow: visible;
+}
+
+.hero-home .hero-paddy-wrapper .paddy-speech-bubble {
+    position: absolute;
+    right: calc(100% + 0.35rem);
+    top: 1.1rem;
+    left: auto;
+    margin-bottom: 0;
+    max-width: 210px;
+    transform: none;
+}
+
+.hero-home .hero-paddy-wrapper .paddy-speech-bubble::after {
+    left: auto;
+    right: -10px;
+    bottom: auto;
+    top: 42%;
+    transform: translateY(-50%);
+    border-width: 10px 0 10px 12px;
+    border-color: transparent transparent transparent #fff;
+}
+
+.hero-home .hero-paddy-wrapper .paddy-hero-img {
+    margin-top: 0;
+}
+
+.hero-home .countdown-container {
+    width: 100%;
+    max-width: none;
+    padding: 1.25rem 1.1rem;
+    background: linear-gradient(160deg, #4a8f1f 0%, #2f6b14 55%, #245510 100%);
+    border: 2px solid #b8e34a;
+    box-shadow:
+        0 0 0 1px rgba(184, 227, 74, 0.35),
+        0 8px 24px rgba(20, 60, 10, 0.45);
+}
+
+.hero-home .countdown-container h2 {
+    font-size: 1.45rem;
+    margin-bottom: 0.9rem;
+    color: #f3ffc8;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.hero-home .countdown {
+    gap: 0.65rem;
+}
+
+.hero-home .countdown-item {
+    min-width: 0;
+    max-width: none;
+    flex: 1;
+    padding: 1rem 0.5rem;
+    background: linear-gradient(180deg, #6bb825 0%, #3f8a18 100%);
+    border: 1px solid rgba(214, 245, 120, 0.55);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.hero-home .countdown-number {
+    font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+    color: #ffffff;
+    text-shadow: 0 2px 0 rgba(30, 80, 12, 0.45);
+}
+
+.hero-home .countdown-label {
+    font-size: 0.75rem;
+    margin-top: 0.45rem;
+    letter-spacing: 1px;
+    color: #eaffb0;
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -864,8 +1112,8 @@ body.menu-open {
     padding-top: 0;
     max-width: none;
     border-top: none;
-    padding-left: 0.65rem;
-    border-left: 1px solid rgba(154, 205, 50, 0.3);
+    padding-left: 0.5rem;
+    border-left: none;
 }
 
 .premier-sponsor-under-nav .premier-sponsor-label {
@@ -2261,7 +2509,7 @@ a, button {
     }
 
     .nav-menu {
-        gap: 0.3rem;
+        gap: 0.75rem;
     }
 
     .nav-menu > li > a {
@@ -2416,14 +2664,15 @@ a, button {
         left: auto;
         top: auto;
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: repeat(2, auto);
         grid-auto-rows: auto;
-        gap: 0.45rem 0.4rem;
+        gap: 0.55rem 0.5rem;
         width: 100%;
         max-width: 100%;
         min-width: 0;
         grid-column: 1 / -1;
         grid-row: 2;
-        padding: 0.15rem 0 0;
+        padding: 0.25rem 0.1rem 0.15rem;
         margin: 0;
         background: transparent;
         box-shadow: none;
@@ -2434,7 +2683,7 @@ a, button {
         align-items: unset;
     }
 
-    /* 6 tabs: Merch, Sponsors, Competitions, Car Show, 5K, Travel */
+    /* 3×2: Merch Sponsors Competitions / Car Show 5K Travel */
     .nav-menu > li {
         display: none;
         width: auto;
@@ -2453,13 +2702,13 @@ a, button {
         display: block;
     }
 
-    /* Match main site pickle pills: dark green border + same dots on every tab */
+    /* Solid smooth pickle pills */
     .nav-menu > li > a,
     .nav-menu > li:nth-child(n) > a {
-        font-size: 0.68rem;
+        font-size: 0.7rem;
         font-weight: 600;
         letter-spacing: 0.01em;
-        padding: 0.5rem 0.35rem;
+        padding: 0.55rem 0.4rem;
         white-space: nowrap;
         margin: 0;
         width: 100%;
@@ -2467,22 +2716,13 @@ a, button {
         text-align: center;
         text-shadow: 0 1px 1px rgba(45, 90, 39, 0.35);
         border-radius: 999px;
-        border: 1.5px solid #4a7c23;
-        overflow: visible;
+        border: 2.5px solid #3a681c;
+        overflow: hidden;
         color: #fff;
         box-shadow:
-            inset 0 1px 1px rgba(255, 255, 255, 0.4),
-            0 2px 5px rgba(45, 90, 39, 0.18),
-            0 -3px 0 -1.5px #4e7d28,
-            3px 0 0 -1.5px #4e7d28,
-            0 3px 0 -1.5px #4e7d28,
-            -3px 0 0 -1.5px #4e7d28;
-        background:
-            radial-gradient(circle at 18% 40%, #4e7d28 0 2.5px, transparent 3.1px),
-            radial-gradient(circle at 42% 62%, #4e7d28 0 2.3px, transparent 2.9px),
-            radial-gradient(circle at 68% 36%, #4e7d28 0 2.5px, transparent 3.1px),
-            radial-gradient(circle at 86% 58%, #4e7d28 0 2.2px, transparent 2.8px),
-            linear-gradient(180deg, #d4ef7a 0%, #9acd32 42%, #6f9f2f 100%);
+            inset 0 1px 1px rgba(255, 255, 255, 0.45),
+            inset 0 -1px 2px rgba(45, 90, 39, 0.18),
+            0 2px 6px rgba(45, 90, 39, 0.16);
     }
 
     .nav-menu > li > a:hover,
@@ -2507,6 +2747,51 @@ a, button {
     .hero-paddy-layout {
         margin-top: 0.75rem;
         flex-wrap: wrap;
+    }
+
+    .hero-home .hero-home-stage {
+        flex-direction: column;
+        align-items: center;
+        min-height: 0;
+        margin-top: 0.85rem;
+        gap: 1.25rem;
+    }
+
+    .hero-home .hero-home-sponsors {
+        width: min(100%, 320px);
+        margin: 0 auto;
+        order: 1;
+        align-self: center;
+    }
+
+    .hero-home .hero-home-aside {
+        width: min(100%, 420px);
+        margin: 0 auto;
+        order: 2;
+        align-self: center;
+        gap: 0.5rem;
+    }
+
+    .hero-home .hero-paddy-wrapper {
+        align-self: center;
+    }
+
+    .hero-home .hero-paddy-wrapper .paddy-speech-bubble {
+        position: relative;
+        right: auto;
+        top: auto;
+        max-width: 200px;
+        margin-bottom: 0.65rem;
+    }
+
+    .hero-home .hero-paddy-wrapper .paddy-speech-bubble::after {
+        left: 50%;
+        right: auto;
+        top: auto;
+        bottom: -14px;
+        transform: translateX(-50%);
+        border-width: 14px 10px 0 10px;
+        border-color: #fff transparent transparent transparent;
     }
 
     .hero-title {
@@ -2581,11 +2866,11 @@ a, button {
         top: auto;
         display: grid !important;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 0.4rem 0.35rem;
+        gap: 0.55rem 0.5rem;
         background: transparent;
         width: 100%;
         box-shadow: none;
-        padding: 0.1rem 0 0;
+        padding: 0.2rem 0.1rem 0.1rem;
         overflow: visible;
     }
 
@@ -2595,12 +2880,16 @@ a, button {
 
     .nav-menu > li > a,
     .nav-menu > li:nth-child(n) > a {
-        padding: 0.45rem 0.25rem;
-        font-size: 0.62rem;
+        padding: 0.5rem 0.3rem;
+        font-size: 0.65rem;
         border-radius: 999px;
-        border: 1.5px solid #4a7c23;
-        overflow: visible;
+        border: 2.5px solid #3a681c;
+        overflow: hidden;
         text-shadow: 0 1px 1px rgba(45, 90, 39, 0.35);
+        box-shadow:
+            inset 0 1px 1px rgba(255, 255, 255, 0.45),
+            inset 0 -1px 2px rgba(45, 90, 39, 0.18),
+            0 2px 6px rgba(45, 90, 39, 0.16);
     }
 
     .nav-menu > li > a:hover {
@@ -2851,6 +3140,31 @@ a, button {
         align-self: center;
     }
 
+    .hero-home .hero-home-aside {
+        width: 100%;
+    }
+
+    .hero-home .hero-home-sponsors {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .hero-home .hero-home-sponsors .hero-sponsor-bubble-premier {
+        width: 78%;
+    }
+
+    .hero-home .hero-home-sponsors .hero-presenting-logo {
+        max-height: 90px;
+    }
+
+    .hero-home .hero-home-sponsors .premier-sponsor-logo {
+        max-height: 52px;
+    }
+
+    .hero-home .hero-paddy-wrapper {
+        align-self: center;
+    }
+
     .paddy-hero-img {
         width: 180px;
     }
@@ -3080,7 +3394,7 @@ a, button {
     }
 
     .nav-menu {
-        gap: 0.35rem 0.3rem;
+        gap: 0.55rem 0.5rem;
     }
 
     .nav-menu > li > a,
