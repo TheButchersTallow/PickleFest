@@ -2769,10 +2769,40 @@ a, button {
         gap: 1.25rem;
     }
 
+    .hero-home .hero-content {
+        padding: 0 1rem;
+    }
+
+    .hero-home .hero-subtitle {
+        text-align: center;
+        line-height: 1.35;
+    }
+
+    .hero-home .hero-subtitle-sep {
+        display: none;
+    }
+
+    .hero-home .hero-subtitle-details {
+        display: block;
+        white-space: nowrap;
+        margin-top: 0.2rem;
+    }
+
     .hero-home .hero-home-sponsors {
         width: min(100%, 320px);
         margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
         order: 1;
+        align-self: center;
+        align-items: center;
+    }
+
+    .hero-home .hero-home-sponsors .hero-sponsor-bubble,
+    .hero-home .hero-home-sponsors .hero-sponsor-bubble-premier {
+        width: 100%;
+        max-width: 300px;
         align-self: center;
     }
 
@@ -2781,7 +2811,19 @@ a, button {
         margin: 0 auto;
         order: 2;
         align-self: center;
+        align-items: center;
         gap: 0.5rem;
+    }
+
+    .hero-home .countdown-container {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-home .countdown {
+        justify-content: center;
     }
 
     .hero-home .hero-paddy-wrapper {
@@ -3166,15 +3208,24 @@ a, button {
 
     .hero-home .hero-home-aside {
         width: 100%;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
     }
 
     .hero-home .hero-home-sponsors {
         width: 100%;
-        max-width: 320px;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        align-items: center;
     }
 
     .hero-home .hero-home-sponsors .hero-sponsor-bubble-premier {
-        width: 78%;
+        width: 100%;
+        align-self: center;
     }
 
     .hero-home .hero-home-sponsors .hero-presenting-logo {
@@ -3183,6 +3234,13 @@ a, button {
 
     .hero-home .hero-home-sponsors .premier-sponsor-logo {
         max-height: 52px;
+    }
+
+    .hero-home .countdown-container {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 
     .hero-home .hero-paddy-wrapper {
