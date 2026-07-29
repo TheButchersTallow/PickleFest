@@ -2743,6 +2743,18 @@ a, button {
         margin-top: var(--header-offset, 220px);
     }
 
+    /* Mobile home: solid green (no photo) and flush under the header tabs */
+    .hero.hero-home {
+        margin-top: 0 !important;
+        padding-top: var(--header-offset, 220px);
+        background-image: none;
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    }
+
+    .hero-home .hero-overlay {
+        background: rgba(0, 0, 0, 0.25);
+    }
+
     /* Don't let Paddy/countdown pull up over the welcome title */
     .hero-paddy-layout {
         margin-top: 0.75rem;
@@ -2919,6 +2931,12 @@ a, button {
         min-height: calc(100vh - var(--header-offset, 220px));
     }
 
+    .hero.hero-home {
+        margin-top: 0 !important;
+        padding-top: var(--header-offset, 220px);
+        padding-bottom: 1.5rem;
+    }
+
     .page-content {
         margin-top: var(--header-offset, 220px);
     }
@@ -3070,6 +3088,12 @@ a, button {
         padding: 0.45rem 0 1.25rem;
         margin-top: var(--header-offset, 220px);
         min-height: calc(100vh - var(--header-offset, 220px));
+    }
+
+    .hero.hero-home {
+        margin-top: 0 !important;
+        padding-top: var(--header-offset, 220px);
+        padding-bottom: 1.25rem;
     }
 
     .page-content {
@@ -3436,6 +3460,12 @@ a, button {
     .hero {
         padding: 0.35rem 0 1rem;
         min-height: auto;
+    }
+
+    .hero.hero-home {
+        margin-top: 0 !important;
+        padding-top: var(--header-offset, 210px);
+        padding-bottom: 1rem;
     }
 
     .hero-subtitle {

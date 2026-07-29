@@ -248,7 +248,7 @@ document.querySelectorAll('[data-copy-email]').forEach(button => {
             return;
         }
         const height = Math.ceil(nav.getBoundingClientRect().height);
-        document.documentElement.style.setProperty('--header-offset', `${height + 10}px`);
+        document.documentElement.style.setProperty('--header-offset', `${height}px`);
     };
 
     applyOffset();
