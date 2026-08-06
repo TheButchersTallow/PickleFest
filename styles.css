@@ -1820,7 +1820,8 @@ section {
     box-sizing: border-box;
 }
 
-.sponsor-logo-card a {
+.sponsor-logo-card a,
+.sponsor-logo-card .sponsor-logo-fill {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1998,7 +1999,8 @@ section {
         padding: 0;
     }
 
-    .sponsor-logo-card a {
+    .sponsor-logo-card a,
+    .sponsor-logo-card .sponsor-logo-fill {
         min-height: 145px;
         padding: 0.55rem;
     }
@@ -3728,7 +3730,8 @@ a, button {
         padding: 0;
     }
 
-    .sponsor-logo-card a {
+    .sponsor-logo-card a,
+    .sponsor-logo-card .sponsor-logo-fill {
         min-height: 135px;
         padding: 0.55rem;
     }
@@ -3836,13 +3839,31 @@ a, button {
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
 }
 
+.fivek-sponsor-block {
+    margin: 1.75rem auto 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.fivek-sponsor-heading {
+    color: var(--white);
+    font-size: clamp(1rem, 2.2vw, 1.2rem);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 1.15rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
 .fivek-sponsor-row {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     align-items: stretch;
     justify-content: center;
-    gap: 1.5rem 2.75rem;
-    margin: 1.75rem auto 0;
+    gap: 0.85rem 1rem;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .fivek-presenting-sponsor {
@@ -3856,9 +3877,12 @@ a, button {
 }
 
 .fivek-sponsor-row .fivek-presenting-sponsor {
-    flex: 1 1 260px;
-    max-width: 360px;
+    flex: unset;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
     margin: 0;
+    padding: 0.85rem 0.65rem;
 }
 
 .fivek-presenting-label {
@@ -3877,11 +3901,17 @@ a, button {
 }
 
 .fivek-presenting-logo {
-    width: min(320px, 72vw);
-    max-height: 130px;
+    width: 100%;
+    max-width: 180px;
+    max-height: 100px;
     height: auto;
     object-fit: contain;
     display: block;
+}
+
+.fivek-sponsor-row .fivek-presenting-logo {
+    max-width: 100%;
+    max-height: 88px;
 }
 
 .fivek-feature-block {
@@ -4319,25 +4349,33 @@ html {
         width: min(125px, 30vw);
     }
 
+    .fivek-sponsor-heading {
+        color: var(--white);
+    }
+
     .fivek-sponsor-row {
-        gap: 0.85rem;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 0.45rem;
         margin-top: 1.25rem;
     }
 
     .fivek-presenting-sponsor {
-        width: min(100%, 320px);
-        padding: 1rem 1.25rem;
+        width: 100%;
+        padding: 0.55rem 0.35rem;
         margin-top: 0;
     }
 
     .fivek-sponsor-row .fivek-presenting-sponsor {
-        flex: 1 1 100%;
-        max-width: 320px;
+        flex: unset;
+        max-width: none;
     }
 
-    .fivek-presenting-logo {
-        width: min(240px, 68vw);
-        max-height: 100px;
+    .fivek-presenting-logo,
+    .fivek-sponsor-row .fivek-presenting-logo {
+        width: 100%;
+        max-width: 100%;
+        max-height: 64px;
     }
 
     .fivek-feature-block {
