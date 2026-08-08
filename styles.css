@@ -1844,6 +1844,21 @@ section {
     pointer-events: none;
 }
 
+.sponsor-logo-card-tms a,
+.sponsor-logo-card-arc-root a,
+.sponsor-logo-card-asher-point a {
+    padding: 0.25rem;
+}
+
+.sponsor-logo-card-tms img,
+.sponsor-logo-card-arc-root img,
+.sponsor-logo-card-asher-point img {
+    max-height: 165px;
+    width: 110%;
+    max-width: 110%;
+    transform: scale(1.12);
+}
+
 .competitions-page .content-headline,
 .competitions-page .content-subheadline {
     text-align: center;
