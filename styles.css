@@ -16,7 +16,7 @@
     --white: #ffffff;
     --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 5px 20px rgba(0, 0, 0, 0.15);
-    /* Pickle pointer — tip at top-left is the click hotspot */
+    /* Pickle pointer â€” tip at top-left is the click hotspot */
     --cursor-pickle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%23d4ef7a'/%3E%3Cstop offset='45%25' stop-color='%239acd32'/%3E%3Cstop offset='100%25' stop-color='%236f9f2f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg transform='translate(2 2) rotate(-38 14 14)'%3E%3Cellipse cx='14' cy='14' rx='5.2' ry='13' fill='url(%23g)' stroke='%234a7c23' stroke-width='1.4'/%3E%3Ccircle cx='12.2' cy='7' r='1.35' fill='%234e7d28'/%3E%3Ccircle cx='15.6' cy='11.5' r='1.15' fill='%234e7d28'/%3E%3Ccircle cx='12.5' cy='15.8' r='1.25' fill='%234e7d28'/%3E%3Ccircle cx='15.4' cy='20' r='1.1' fill='%234e7d28'/%3E%3Cellipse cx='14' cy='2.2' rx='1.6' ry='1.1' fill='%237cb342' stroke='%234a7c23' stroke-width='0.8'/%3E%3C/g%3E%3C/svg%3E") 2 2, auto;
 }
 
@@ -125,7 +125,7 @@ body.menu-open {
     grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
     padding: 0.9rem 1.5rem;
-    min-height: 120px;
+    min-height: 140px;
     width: 100%;
     max-width: none;
     margin: 0;
@@ -175,9 +175,9 @@ body.menu-open {
 }
 
 .logo-img {
-    height: 110px;
+    height: 88px;
     width: auto;
-    max-width: 300px;
+    max-width: 250px;
     object-fit: contain;
     display: block;
 }
@@ -198,26 +198,42 @@ body.menu-open {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 0.35rem;
+    gap: 0.05rem;
     min-height: 0;
 }
 
 .presenting-sponsor-label,
 .premier-sponsor-under-nav .premier-sponsor-label,
 .brought-sponsor-label {
-    font-size: 0.72rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--primary-color);
-    line-height: 1.15;
+    line-height: 1;
     text-align: center;
     white-space: nowrap;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    min-height: 1.2em;
-    height: 1.2em;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-height: 1.35rem;
+    height: 1.35rem;
+}
+
+.premier-sponsor-under-nav .premier-sponsor-label,
+.brought-sponsor-label {
+    font-size: 0.72rem;
+}
+
+.sponsor-logo-wrapper .presenting-sponsor-label,
+.nav-sponsor-col .presenting-sponsor-label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    min-height: 1.35rem;
+    height: 1.35rem;
 }
 
 .sponsor-logo-link,
@@ -225,7 +241,8 @@ body.menu-open {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 86px;
+    min-height: 88px;
+    height: 88px;
     width: 100%;
     text-decoration: none;
     transition: opacity 0.3s ease;
@@ -238,10 +255,10 @@ body.menu-open {
 }
 
 .sponsor-logo {
-    height: 64px;
+    height: 88px;
     width: auto;
-    max-width: 180px;
-    max-height: 74px;
+    max-width: 250px;
+    max-height: 88px;
     object-fit: contain;
     display: block;
     opacity: 0.95;
@@ -291,7 +308,7 @@ body.menu-open {
     border: 2.5px solid #3a681c;
     overflow: visible;
     width: auto;
-    /* Solid pickle edge — no choppy outer bumps */
+    /* Solid pickle edge â€” no choppy outer bumps */
     box-shadow:
         inset 0 1px 1px rgba(255, 255, 255, 0.45),
         inset 0 -1px 2px rgba(45, 90, 39, 0.18),
@@ -752,13 +769,13 @@ body.menu-open {
     background: var(--white);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
     width: 100%;
-    padding: 1rem 1.15rem;
+    padding: 0.75rem 1.15rem 0.9rem;
     align-self: stretch;
     box-sizing: border-box;
 }
 
 .hero-home .hero-home-sponsors .hero-sponsor-col {
-    gap: 0.4rem;
+    gap: 0.05rem;
     width: 100%;
 }
 
@@ -766,13 +783,27 @@ body.menu-open {
 .hero-home .hero-home-sponsors .premier-sponsor-label,
 .hero-home .hero-home-sponsors .hero-brought-label {
     color: var(--primary-color);
-    font-size: clamp(0.78rem, 1.15vw, 0.95rem);
     font-weight: 800;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
-    line-height: 1.2;
-    min-height: 1.35em;
+    line-height: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 1.4rem;
+    height: 1.4rem;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-home .hero-home-sponsors .premier-sponsor-label,
+.hero-home .hero-home-sponsors .hero-brought-label {
+    font-size: clamp(0.78rem, 1.15vw, 0.95rem);
+}
+
+.hero-home .hero-home-sponsors .hero-presenting-label {
+    font-size: clamp(1rem, 1.45vw, 1.2rem);
 }
 
 .hero-home .hero-home-sponsors .hero-sponsor-col a {
@@ -780,15 +811,32 @@ body.menu-open {
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 82px;
+    min-height: 88px;
+    height: 88px;
 }
 
-.hero-home .hero-home-sponsors .hero-presenting-logo,
-.hero-home .hero-home-sponsors .premier-sponsor-logo,
+.hero-home .hero-home-sponsors .hero-presenting-logo {
+    width: auto;
+    max-width: 100%;
+    max-height: 88px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.hero-home .hero-home-sponsors .premier-sponsor-logo {
+    width: auto;
+    max-width: 100%;
+    max-height: 46px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
 .hero-home .hero-home-sponsors .hero-brought-logo {
     width: auto;
     max-width: 100%;
-    max-height: 82px;
+    max-height: 78px;
     height: auto;
     object-fit: contain;
     display: block;
@@ -1161,9 +1209,9 @@ body.menu-open {
 
 .premier-sponsor-under-nav .premier-sponsor-logo {
     width: auto;
-    height: 64px;
-    max-width: 160px;
-    max-height: 74px;
+    height: 46px;
+    max-width: 130px;
+    max-height: 46px;
     object-fit: contain;
     display: block;
 }
@@ -1177,9 +1225,9 @@ body.menu-open {
 
 .brought-sponsor-logo {
     width: auto;
-    height: 86px;
-    max-width: 300px;
-    max-height: 86px;
+    height: 78px;
+    max-width: 220px;
+    max-height: 78px;
     object-fit: contain;
     display: block;
 }
@@ -1750,12 +1798,14 @@ section {
 }
 
 .sponsors-page .presenting-sponsors-grid-pair {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
     align-items: stretch;
     justify-content: center;
-    gap: 1.5rem 2.75rem;
-    width: 100%;
+    gap: 1.25rem 1.5rem;
+    width: min(100%, 620px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .sponsors-page .sponsor-highlight-card {
@@ -1774,19 +1824,77 @@ section {
 }
 
 .sponsors-page .sponsor-highlight-card-primary {
-    width: auto;
-    flex: 1 1 340px;
-    max-width: 560px;
-    min-height: 280px;
-    padding: 2.25rem 2.5rem;
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: none;
+    flex: unset;
+    min-height: 240px;
+    padding: 2rem 2.25rem;
     gap: 0.9rem;
 }
 
+.sponsors-page .sponsor-highlight-card-premier,
+.sponsors-page .sponsor-highlight-card-pickle-partner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex: unset;
+    width: 100%;
+    max-width: none;
+    min-height: 190px;
+    height: 100%;
+    padding: 1.25rem 1.35rem;
+    gap: 0.55rem;
+    box-sizing: border-box;
+}
+
 .sponsors-page .sponsor-highlight-card-premier {
-    flex: 0 1 240px;
-    max-width: 280px;
-    min-height: 200px;
-    padding: 1.35rem 1.5rem;
+    grid-column: 1;
+}
+
+.sponsors-page .sponsor-highlight-card-pickle-partner {
+    grid-column: 2;
+}
+
+.sponsors-page .sponsor-highlight-card-premier .premier-sponsor-label,
+.sponsors-page .sponsor-highlight-card-pickle-partner .pickle-partner-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.35em;
+    height: 1.35em;
+    margin: 0;
+    font-size: clamp(0.82rem, 1.5vw, 0.98rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    color: var(--primary-color);
+}
+
+.sponsors-page .sponsor-highlight-card-premier .premier-sponsor-logo,
+.sponsors-page .sponsor-highlight-card-pickle-partner .pickle-partner-logo {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.pickle-partner-label {
+    color: var(--primary-color);
+    font-size: clamp(0.78rem, 1.4vw, 0.95rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.pickle-partner-logo {
+    width: min(150px, 38vw);
+    max-height: 58px;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
 
 .sponsors-page .sponsor-highlight-card-primary .presenting-sponsor-label {
@@ -1808,8 +1916,13 @@ section {
 }
 
 .sponsors-page .sponsor-highlight-card-premier .premier-sponsor-logo {
-    width: min(170px, 42vw);
-    max-height: 72px;
+    width: min(200px, 48vw);
+    max-height: 88px;
+}
+
+.sponsors-page .sponsor-highlight-card-pickle-partner .pickle-partner-logo {
+    width: min(130px, 32vw);
+    max-height: 50px;
 }
 
 .sponsors-page .hero-sponsor-col-premier {
@@ -2693,41 +2806,48 @@ a, button {
     }
 
     .logo-img {
-        height: 96px;
-        max-width: 260px;
+        height: 78px;
+        max-width: 220px;
     }
 
     .sponsor-logo {
-        height: 52px;
-        max-width: 150px;
-        max-height: 60px;
+        height: 78px;
+        max-width: 220px;
+        max-height: 78px;
     }
 
-    .presenting-sponsor-label,
     .premier-sponsor-under-nav .premier-sponsor-label,
     .brought-sponsor-label {
         font-size: 0.68rem;
-        min-height: 1.2em;
-        height: 1.2em;
+        min-height: 1.25rem;
+        height: 1.25rem;
+    }
+
+    .sponsor-logo-wrapper .presenting-sponsor-label,
+    .nav-sponsor-col .presenting-sponsor-label {
+        font-size: 0.88rem;
+        min-height: 1.25rem;
+        height: 1.25rem;
     }
 
     .nav-sponsor-col > a,
     .sponsor-logo-link {
         min-height: 78px;
+        height: 78px;
     }
 
     .premier-sponsor-under-nav .premier-sponsor-logo {
         width: auto;
-        height: 52px;
-        max-width: 140px;
-        max-height: 60px;
+        height: 42px;
+        max-width: 115px;
+        max-height: 42px;
     }
 
     .brought-sponsor-logo {
         width: auto;
-        height: 78px;
-        max-width: 270px;
-        max-height: 78px;
+        height: 68px;
+        max-width: 190px;
+        max-height: 68px;
     }
 
     .nav-menu {
@@ -2826,52 +2946,64 @@ a, button {
     }
 
     .presenting-sponsor-label {
-        font-size: 0.55rem;
+        font-size: 0.7rem;
         letter-spacing: 0.3px;
         text-align: center;
     }
 
     .sponsor-logo {
-        height: 40px;
-        max-width: 110px;
-        max-height: 48px;
+        height: 64px;
+        max-width: 160px;
+        max-height: 64px;
         width: auto;
     }
 
-    .presenting-sponsor-label,
     .premier-sponsor-under-nav .premier-sponsor-label,
     .brought-sponsor-label {
         font-size: 0.55rem;
         text-align: center;
         white-space: normal;
         max-width: 90px;
-        line-height: 1.15;
-        min-height: 2.3em;
-        height: 2.3em;
+        line-height: 1.1;
+        min-height: 2.2em;
+        height: 2.2em;
+        align-items: flex-end;
+    }
+
+    .sponsor-logo-wrapper .presenting-sponsor-label,
+    .nav-sponsor-col .presenting-sponsor-label {
+        font-size: 0.72rem;
+        white-space: normal;
+        max-width: 100px;
+        min-height: 2.2em;
+        height: 2.2em;
+        line-height: 1.1;
+        align-items: flex-end;
     }
 
     .nav-sponsor-col > a,
     .sponsor-logo-link {
-        min-height: 56px;
+        min-height: 64px;
+        height: 64px;
     }
 
     .premier-sponsor-under-nav .premier-sponsor-logo {
         width: auto;
-        height: 40px;
-        max-width: 100px;
-        max-height: 48px;
+        height: 34px;
+        max-width: 95px;
+        max-height: 34px;
     }
 
     .brought-sponsor-logo {
         width: auto;
         height: 56px;
-        max-width: 160px;
+        max-width: 155px;
         max-height: 56px;
     }
 
     .logo-img {
-        height: 92px;
-        max-width: 230px;
+        height: 64px;
+        max-width: 160px;
         width: auto;
     }
 
@@ -2942,7 +3074,7 @@ a, button {
         align-items: unset;
     }
 
-    /* 3×2: Merch Sponsors Competitions / Car Show Travel 5K */
+    /* 3Ã—2: Merch Sponsors Competitions / Car Show Travel 5K */
     .nav-menu > li {
         display: none;
         width: auto;
@@ -3144,9 +3276,9 @@ a, button {
     }
 
     .logo-img {
-        height: 80px;
+        height: 52px;
         width: auto;
-        max-width: 195px;
+        max-width: 130px;
         object-fit: contain;
     }
 
@@ -3169,39 +3301,50 @@ a, button {
         display: none;
     }
 
-    .presenting-sponsor-label,
     .premier-sponsor-under-nav .premier-sponsor-label,
     .brought-sponsor-label {
         font-size: 0.45rem;
         max-width: 72px;
-        min-height: 2.3em;
-        height: 2.3em;
+        min-height: 2.2em;
+        height: 2.2em;
         white-space: normal;
+        align-items: flex-end;
+    }
+
+    .sponsor-logo-wrapper .presenting-sponsor-label,
+    .nav-sponsor-col .presenting-sponsor-label {
+        font-size: 0.58rem;
+        max-width: 84px;
+        min-height: 2.2em;
+        height: 2.2em;
+        white-space: normal;
+        align-items: flex-end;
     }
 
     .sponsor-logo {
-        height: 36px;
-        max-width: 95px;
-        max-height: 42px;
+        height: 52px;
+        max-width: 130px;
+        max-height: 52px;
     }
 
     .nav-sponsor-col > a,
     .sponsor-logo-link {
-        min-height: 48px;
+        min-height: 52px;
+        height: 52px;
     }
 
     .premier-sponsor-under-nav .premier-sponsor-logo {
         width: auto;
-        height: 36px;
+        height: 34px;
         max-width: 90px;
-        max-height: 42px;
+        max-height: 34px;
     }
 
     .brought-sponsor-logo {
         width: auto;
-        height: 48px;
+        height: 46px;
         max-width: 120px;
-        max-height: 48px;
+        max-height: 46px;
     }
 
     .nav-menu {
@@ -3383,9 +3526,9 @@ a, button {
     }
 
     .logo-img {
-        height: 80px;
+        height: 52px;
         width: auto;
-        max-width: 195px;
+        max-width: 130px;
         object-fit: contain;
     }
 
@@ -3394,9 +3537,10 @@ a, button {
     }
 
     .sponsor-logo {
-        height: 32px;
+        height: 52px;
         width: auto;
-        max-width: 70px;
+        max-width: 130px;
+        max-height: 52px;
         object-fit: contain;
     }
 
@@ -3513,10 +3657,16 @@ a, button {
         align-items: center;
     }
 
-    .hero-home .hero-home-sponsors .hero-presenting-logo,
-    .hero-home .hero-home-sponsors .premier-sponsor-logo,
+    .hero-home .hero-home-sponsors .hero-presenting-logo {
+        max-height: 70px;
+    }
+
+    .hero-home .hero-home-sponsors .premier-sponsor-logo {
+        max-height: 38px;
+    }
+
     .hero-home .hero-home-sponsors .hero-brought-logo {
-        max-height: 78px;
+        max-height: 64px;
     }
 
     .hero-home .countdown-container {
@@ -3657,12 +3807,14 @@ a, button {
     }
 
     .logo-img {
-        height: 70px;
-        max-width: 170px;
+        height: 52px;
+        max-width: 130px;
     }
 
     .sponsor-logo {
-        max-width: 65px;
+        height: 52px;
+        max-width: 130px;
+        max-height: 52px;
     }
 
     .merch-buttons,
@@ -3741,38 +3893,54 @@ a, button {
     }
 
     .sponsor-logo {
-        height: 30px;
-        max-width: 80px;
-        max-height: 34px;
+        height: 44px;
+        max-width: 110px;
+        max-height: 44px;
+    }
+
+    .logo-img {
+        height: 44px;
+        max-width: 110px;
     }
 
     .nav-sponsor-col > a,
     .sponsor-logo-link {
-        min-height: 40px;
+        min-height: 44px;
+        height: 44px;
     }
 
     .premier-sponsor-under-nav .premier-sponsor-logo {
         width: auto;
         height: 30px;
-        max-width: 72px;
-        max-height: 34px;
+        max-width: 80px;
+        max-height: 30px;
     }
 
     .brought-sponsor-logo {
         width: auto;
-        height: 40px;
-        max-width: 100px;
-        max-height: 40px;
+        height: 42px;
+        max-width: 110px;
+        max-height: 42px;
     }
 
-    .presenting-sponsor-label,
     .premier-sponsor-under-nav .premier-sponsor-label,
     .brought-sponsor-label {
         font-size: 0.38rem;
         max-width: 62px;
-        min-height: 2.3em;
-        height: 2.3em;
+        min-height: 2.2em;
+        height: 2.2em;
         white-space: normal;
+        align-items: flex-end;
+    }
+
+    .sponsor-logo-wrapper .presenting-sponsor-label,
+    .nav-sponsor-col .presenting-sponsor-label {
+        font-size: 0.5rem;
+        max-width: 72px;
+        min-height: 2.2em;
+        height: 2.2em;
+        white-space: normal;
+        align-items: flex-end;
     }
 
     .nav-menu {
@@ -3899,7 +4067,8 @@ a, button {
     }
 
     .carshow-hero-sponsor,
-    .carshow-hero-sponsor-premier {
+    .carshow-hero-sponsor-premier,
+    .carshow-hero-sponsor-pickle-partner {
         flex: 1 1 100%;
         max-width: 100%;
     }
@@ -3967,7 +4136,7 @@ a, button {
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: center;
-    gap: 1.5rem 2.75rem;
+    gap: 1.5rem 2rem;
     margin: 1.75rem auto;
 }
 
@@ -3975,7 +4144,7 @@ a, button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0.6rem;
     min-height: 150px;
     padding: 1.35rem 1.75rem;
@@ -3984,10 +4153,47 @@ a, button {
 }
 
 .carshow-hero-sponsor-premier {
-    flex: 0 1 200px;
-    max-width: 240px;
-    padding: 1.15rem 1.4rem;
-    min-height: 140px;
+    flex: 0 1 220px;
+    max-width: 260px;
+    padding: 1.25rem 1.4rem;
+    min-height: 150px;
+}
+
+.carshow-hero-sponsor-pickle-partner {
+    flex: 0 1 220px;
+    max-width: 260px;
+    padding: 1.25rem 1.4rem;
+    min-height: 150px;
+}
+
+.carshow-hero-sponsor-row .presenting-sponsor-label,
+.carshow-hero-sponsor-row .premier-sponsor-label,
+.carshow-hero-sponsor-row .pickle-partner-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 1.4em;
+    height: 1.4em;
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: var(--primary-color);
+}
+
+.carshow-hero-sponsor:first-child .presenting-sponsor-label {
+    font-size: 1.25rem;
+    letter-spacing: 0.07em;
+}
+
+.carshow-hero-sponsor-pickle-partner .pickle-partner-logo {
+    width: min(170px, 24vw);
+    max-height: 58px;
 }
 
 .carshow-hero-sponsor a {
@@ -4038,7 +4244,7 @@ a, button {
 
 .fivek-sponsor-row {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     align-items: stretch;
     justify-content: center;
     gap: 0.85rem 1rem;
@@ -4063,6 +4269,20 @@ a, button {
     min-width: 0;
     margin: 0;
     padding: 0.85rem 0.65rem;
+}
+
+.fivek-pickle-partner {
+    gap: 0.4rem;
+}
+
+.fivek-pickle-partner .pickle-partner-label {
+    font-size: 0.7rem;
+    color: var(--primary-color);
+}
+
+.fivek-pickle-partner .pickle-partner-logo {
+    max-height: 52px;
+    width: min(140px, 100%);
 }
 
 .fivek-presenting-label {
@@ -4514,10 +4734,33 @@ html {
     }
 
     .carshow-hero-sponsor-premier {
-        flex: 1 1 160px;
-        max-width: 200px;
-        min-height: 110px;
-        padding: 0.9rem 1rem;
+        flex: 1 1 180px;
+        max-width: 220px;
+        min-height: 130px;
+        padding: 1rem 1.1rem;
+    }
+
+    .carshow-hero-sponsor-pickle-partner {
+        flex: 1 1 180px;
+        max-width: 220px;
+        min-height: 130px;
+        padding: 1rem 1.1rem;
+    }
+
+    .carshow-hero-sponsor-row .presenting-sponsor-label,
+    .carshow-hero-sponsor-row .premier-sponsor-label,
+    .carshow-hero-sponsor-row .pickle-partner-label {
+        font-size: 0.82rem;
+        white-space: nowrap;
+    }
+
+    .carshow-hero-sponsor:first-child .presenting-sponsor-label {
+        font-size: 1.05rem;
+    }
+
+    .carshow-hero-sponsor-pickle-partner .pickle-partner-logo {
+        max-height: 48px;
+        width: min(150px, 42vw);
     }
 
     .carshow-hero-sponsor-logo {
@@ -4535,7 +4778,7 @@ html {
 
     .fivek-sponsor-row {
         display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 0.45rem;
         margin-top: 1.25rem;
     }
