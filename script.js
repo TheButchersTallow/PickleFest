@@ -38,6 +38,27 @@ if (desktopHamburger && hamburgerMenu) {
     });
 }
 
+// Social tab: keep dropdown open without jumping to top of page
+document.querySelectorAll('.nav-social-tab').forEach(tab => {
+    tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        const item = tab.closest('.nav-item-social');
+        if (!item) return;
+        const isOpen = item.classList.toggle('is-open');
+        tab.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+});
+
+document.addEventListener('click', (e) => {
+    document.querySelectorAll('.nav-item-social.is-open').forEach(item => {
+        if (!item.contains(e.target)) {
+            item.classList.remove('is-open');
+            const tab = item.querySelector('.nav-social-tab');
+            if (tab) tab.setAttribute('aria-expanded', 'false');
+        }
+    });
+});
+
 // Mobile Navigation Toggle (using desktop hamburger on mobile)
 const navMenu = document.querySelector('.nav-menu');
 
