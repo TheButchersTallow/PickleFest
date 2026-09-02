@@ -592,11 +592,7 @@ body.menu-open {
     }
 }
 
-@media (max-width: 900px) {
-    .nav-partner-sponsors {
-        display: none;
-    }
-}
+/* Phone header layout is defined after the 1180px block */
 
 .nav-actions .hamburger-dropdown-wrapper {
     order: 2;
@@ -3166,7 +3162,8 @@ a, button {
         display: none;
     }
 
-    /* Even top row: Logo | Brought | Presenting | Actions */
+    /* Even top row: Logo | Brought | Presenting | Actions (tablet);
+       phone (≤900px) hides Brought and shows ITNS instead via separate rules */
     .navbar-container {
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) auto;
@@ -3390,6 +3387,10 @@ a, button {
         z-index: 5;
     }
 
+    .nav-item-social.is-open {
+        z-index: 50;
+    }
+
     .nav-submenu-social {
         top: calc(100% + 0.35rem);
         z-index: 30;
@@ -3426,6 +3427,18 @@ a, button {
 
     .nav-submenu {
         display: none;
+    }
+
+    .nav-item-social.is-open > .nav-submenu-social {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+        position: absolute;
+        top: calc(100% + 0.35rem);
+        left: 50%;
+        z-index: 400;
+        pointer-events: auto;
     }
 
     .page-content {
@@ -3553,6 +3566,83 @@ a, button {
     .hero-subtitle {
         white-space: normal;
         padding: 0 0.75rem;
+    }
+}
+
+/* Phone only: Logo + RRCU, ITNS, hamburger — hide Brought to you by (desktop unchanged) */
+@media (max-width: 900px) {
+    .brought-sponsor-under-nav {
+        display: none !important;
+    }
+
+    .navbar-container {
+        grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr) auto;
+    }
+
+    .nav-logo-cluster {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
+    }
+
+    .nav-brand .nav-sponsor-col:not(.brought-sponsor-under-nav):not(.nav-partner-col) {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: start;
+        margin-left: 0.1rem;
+    }
+
+    .nav-actions {
+        display: contents;
+    }
+
+    .nav-partner-sponsors {
+        display: contents;
+    }
+
+    .nav-partner-col:not(.nav-premier-col) {
+        display: none !important;
+    }
+
+    .nav-premier-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: center;
+        align-self: center;
+        max-width: 110px;
+    }
+
+    .nav-premier-col .premier-sponsor-label {
+        font-size: 0.5rem;
+        max-width: 110px;
+        white-space: normal;
+        line-height: 1.1;
+        min-height: 2em;
+        height: 2em;
+    }
+
+    .nav-premier-col > a,
+    .nav-premier-col .sponsor-logo-link {
+        min-height: 48px !important;
+        height: 48px !important;
+    }
+
+    .nav-premier-col .premier-sponsor-logo.nav-partner-logo {
+        height: 40px;
+        max-height: 40px;
+        max-width: 100px;
+    }
+
+    .nav-actions .hamburger-dropdown-wrapper {
+        grid-column: 4;
+        grid-row: 1;
+        justify-self: end;
+        align-self: center;
+        margin-left: 0;
+        order: 0;
     }
 }
 

@@ -42,10 +42,19 @@ if (desktopHamburger && hamburgerMenu) {
 document.querySelectorAll('.nav-social-tab').forEach(tab => {
     tab.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         const item = tab.closest('.nav-item-social');
         if (!item) return;
-        const isOpen = item.classList.toggle('is-open');
-        tab.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        const willOpen = !item.classList.contains('is-open');
+        document.querySelectorAll('.nav-item-social.is-open').forEach(openItem => {
+            if (openItem !== item) {
+                openItem.classList.remove('is-open');
+                const otherTab = openItem.querySelector('.nav-social-tab');
+                if (otherTab) otherTab.setAttribute('aria-expanded', 'false');
+            }
+        });
+        item.classList.toggle('is-open', willOpen);
+        tab.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
     });
 });
 
@@ -56,6 +65,13 @@ document.addEventListener('click', (e) => {
             const tab = item.querySelector('.nav-social-tab');
             if (tab) tab.setAttribute('aria-expanded', 'false');
         }
+    });
+});
+
+// Don't close social dropdown when tapping its own links before navigate
+document.querySelectorAll('.nav-submenu-social a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.stopPropagation();
     });
 });
 
