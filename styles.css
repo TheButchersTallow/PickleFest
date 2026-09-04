@@ -1235,6 +1235,11 @@ body.menu-open {
     gap: 1.5rem;
     margin: 1.5rem auto 0.5rem;
     width: 100%;
+    align-items: start;
+}
+
+.meet-patty-gallery-landscape {
+    margin-top: 1.5rem;
 }
 
 .meet-patty-card {
@@ -1246,15 +1251,21 @@ body.menu-open {
     box-shadow: 0 10px 28px rgba(45, 90, 39, 0.16);
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .meet-patty-photo {
     width: 100%;
+    aspect-ratio: 3 / 4;
     height: auto;
-    max-height: 420px;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center;
     background: #f7faf2;
     display: block;
+}
+
+.meet-patty-gallery-landscape .meet-patty-photo {
+    aspect-ratio: 4 / 3;
 }
 
 .meet-patty-card figcaption {
