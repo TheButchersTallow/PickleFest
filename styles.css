@@ -840,7 +840,7 @@ body.menu-open {
     margin-top: 120px;
 }
 
-/* Home page only: festival photo behind title, Patty, and countdown */
+/* Home page only: festival photo behind title, Paddy, and countdown */
 .hero-home {
     background-color: #2d5a27;
     background-image: url("assets/picklefest/pickle fest home page.png");
@@ -858,7 +858,7 @@ body.menu-open {
     );
 }
 
-/* Home: welcome top; RRCU + ITNS stacked left; countdown above Patty far right */
+/* Home: welcome top; RRCU + ITNS stacked left; countdown above Paddy far right */
 .hero-home .hero-content {
     max-width: 1760px;
     padding: 0 1.25rem 0 0;
@@ -1197,7 +1197,7 @@ body.menu-open {
     border-color: #fff transparent transparent transparent;
 }
 
-.meet-patty-btn {
+.meet-paddy-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1223,13 +1223,13 @@ body.menu-open {
     z-index: 2;
 }
 
-.meet-patty-btn:hover {
+.meet-paddy-btn:hover {
     transform: translateY(-2px);
     filter: brightness(1.06);
     color: var(--white);
 }
 
-.meet-patty-gallery {
+.meet-paddy-gallery {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.5rem;
@@ -1238,11 +1238,11 @@ body.menu-open {
     align-items: start;
 }
 
-.meet-patty-gallery-landscape {
+.meet-paddy-gallery-landscape {
     margin-top: 1.5rem;
 }
 
-.meet-patty-card {
+.meet-paddy-card {
     margin: 0;
     background: var(--white);
     border: 2.5px solid #6b9e2e;
@@ -1254,7 +1254,7 @@ body.menu-open {
     height: 100%;
 }
 
-.meet-patty-photo {
+.meet-paddy-photo {
     width: 100%;
     aspect-ratio: 3 / 4;
     height: auto;
@@ -1264,11 +1264,11 @@ body.menu-open {
     display: block;
 }
 
-.meet-patty-gallery-landscape .meet-patty-photo {
+.meet-paddy-gallery-landscape .meet-paddy-photo {
     aspect-ratio: 4 / 3;
 }
 
-.meet-patty-card figcaption {
+.meet-paddy-card figcaption {
     padding: 0.85rem 1rem;
     text-align: center;
     color: var(--primary-color);
@@ -1277,18 +1277,18 @@ body.menu-open {
 }
 
 @media (max-width: 1024px) {
-    .meet-patty-gallery {
+    .meet-paddy-gallery {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media (max-width: 768px) {
-    .meet-patty-gallery {
+    .meet-paddy-gallery {
         grid-template-columns: 1fr;
         gap: 1.15rem;
     }
 
-    .meet-patty-btn {
+    .meet-paddy-btn {
         font-size: 0.85rem;
         padding: 0.55rem 1.1rem;
     }
