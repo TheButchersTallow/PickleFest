@@ -1982,6 +1982,35 @@ section {
     font-weight: 600;
 }
 
+.vendor-map-figure {
+    margin: 2rem auto 0.5rem;
+    max-width: min(900px, 100%);
+}
+
+.vendor-map-figure .vendor-map-image,
+.vendor-map-image.content-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    display: block;
+    border-radius: 16px;
+    border: 2.5px solid #6b9e2e;
+    box-shadow: 0 10px 28px rgba(45, 90, 39, 0.14);
+    margin: 0;
+}
+
+.vendor-map-figure figcaption {
+    margin-top: 0.75rem;
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
 .sold-out-stamp {
     position: absolute;
     top: 2.5rem;
